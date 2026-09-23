@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesele - Egzamin Dojrzałości</title>
+    <meta name="description" content="Quiz z „Wesela” Wyspiańskiego: losowe pytania o bohaterów, zjawy, symbole i genezę dramatu – z wyjaśnieniami odpowiedzi.">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,36 +16,41 @@
 <div class="container">
     <h1>Wesele</h1>
     <div class="ornament">❦ ❧ ❦</div>
-    <h3 style="text-align: center; border: none; margin-top: -10px;">Stanisława Wyspiańskiego</h3>
+    <p class="subtitle">Stanisława Wyspiańskiego</p>
 
     <!-- Nawigacja -->
-    <nav>
+    <nav class="site-nav" aria-label="Menu główne">
         <ul>
             <li><a href="index.html">Strona Główna</a></li>
             <li><a href="opracowanie.html">Opracowanie Lektury</a></li>
-            <li><a href="quiz.html">Egzamin (Quiz)</a></li>
+            <li><a href="quiz.html" aria-current="page">Egzamin (Quiz)</a></li>
         </ul>
     </nav>
 
     <div class="quiz-container" id="quiz">
         <h2>Egzamin Dojrzałości</h2>
-        <p style="text-align: center; font-style: italic;">Sprawdź swą wiedzę, nim zapieje kur i pryśnie czar weselnej nocy.</p>
-        
+        <p class="quiz-intro">Sprawdź swą wiedzę, nim zapieje kur i pryśnie czar weselnej nocy. Każde podejście losuje nowy zestaw pytań.</p>
+
         <div class="progress-container" id="progressContainer" style="display: none;">
             <div class="progress-bar" id="progressBar"></div>
         </div>
+        <p class="progress-label" id="progressLabel" hidden></p>
 
-        <form id="weseleQuiz">
-            <!-- Pytania beda ladowane dynamicznie z JS -->
+        <div id="weseleQuiz">
+            <!-- Pytania są ładowane dynamicznie z data/pytania.json -->
             <div id="questionsContainer">
                 <p style="text-align: center;">Trwa przygotowywanie pytań...</p>
             </div>
-            
-            <button type="button" id="submitBtn" style="display: none;" onclick="checkQuiz()">Zakończ test i poznaj swój los</button>
-        </form>
 
-        <div id="result"></div>
+            <button type="button" id="submitBtn" style="display: none;">Zakończ test i poznaj swój los</button>
+        </div>
+
+        <div id="result" aria-live="polite"></div>
     </div>
+
+    <footer class="site-footer">
+        <p>Nie znasz odpowiedzi? Wszystko znajdziesz w <a href="opracowanie.html">opracowaniu lektury</a>.</p>
+    </footer>
 
 </div>
 

@@ -3,11 +3,12 @@
         "id": 1,
         "question": "Gdzie rozgrywa się akcja „Wesela”?",
         "options": [
-            "W mrocznym dworku w Soplicowie",
-            "W chacie w podkrakowskich Bronowicach",
+            "W szlacheckim dworku w Soplicowie",
+            "W izbie domu Gospodarza w podkrakowskich Bronowicach",
             "W krakowskich Sukiennicach, pośród kramów"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Akcja toczy się w Bronowicach Małych pod Krakowem, w izbie domu Gospodarza, obok sali, w której trwa zabawa weselna."
     },
     {
         "id": 2,
@@ -17,17 +18,19 @@
             "Poecie, jako przypomnienie dawnej chwały",
             "Panu Młodemu, wytykając mu pozerstwo"
         ],
-        "answer": 0
+        "answer": 0,
+        "explanation": "Stańczyk przychodzi do Dziennikarza (akt II, sc. 7) – redaktora konserwatywnej gazety, czyli jednego ze „stańczyków” – i wytyka mu bierność."
     },
     {
         "id": 3,
-        "question": "Z jakiego błahego powodu Jasiek zgubił złoty róg?",
+        "question": "Z jakiego powodu Jasiek zgubił złoty róg?",
         "options": [
             "Został napadnięty przez zaborców na trakcie",
-            "Schylił się, by podnieść krakowską czapkę z pawich piór",
+            "Schylił się, by podnieść czapkę z pawich piór",
             "Podstępnie ukradł mu go Upiór (Jakub Szela)"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Na rozstajach Jasiek schylił się po czapkę z pawich piór i zgubił róg – prywatna próżność wygrała ze sprawą narodową."
     },
     {
         "id": 4,
@@ -37,67 +40,74 @@
             "Marazm, bierność i głęboki letarg narodu polskiego",
             "Nadchodzącą wiosnę i triumf chłopów nad inteligencją"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Senny, bezwolny taniec to obraz narodu niezdolnego do czynu w chwili dziejowej szansy."
     },
     {
         "id": 5,
-        "question": "Z czyich ust padają słynne słowa: „Miałeś, chamie, złoty róg, ostał ci się ino sznur”?",
+        "question": "Z czyich ust padają słowa: „Miałeś, chamie, złoty róg… ostał ci się ino sznur”?",
         "options": [
-            "Wernyhory do zdezorientowanego Gospodarza",
-            "Jaśka do samego siebie z rozpaczy",
-            "Chochoła, drwiącego z przerażonego Jaśka"
+            "Wernyhory, zwracającego się do Gospodarza",
+            "Jaśka, mówiącego z rozpaczy do samego siebie",
+            "Chochoła, drwiącego z Jaśka"
         ],
-        "answer": 2
+        "answer": 2,
+        "explanation": "To piosenka Chochoła z finału aktu III, skierowana do Jaśka, który wrócił bez rogu."
     },
     {
         "id": 6,
-        "question": "Kto był pierwowzorem Pana Młodego w „Weselu”?",
+        "question": "Kto był pierwowzorem Pana Młodego?",
         "options": [
             "Stanisław Wyspiański",
             "Lucjan Rydel",
             "Włodzimierz Tetmajer"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Poeta Lucjan Rydel 20 listopada 1900 r. poślubił Jadwigę Mikołajczykównę z Bronowic. Wyspiański był gościem na tym weselu."
     },
     {
         "id": 7,
-        "question": "Które z wymienionych zjawisk ukazuje I akt dramatu?",
+        "question": "Co przede wszystkim ukazuje akt I dramatu?",
         "options": [
-            "Solidaryzm społeczny i pełne zjednoczenie",
+            "Solidaryzm społeczny i pełne zjednoczenie stanów",
             "Chłopomanię inteligencji i wzajemne niezrozumienie stanów",
             "Bezpośrednie przygotowania do zbrojnego powstania"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Realistyczny akt I to seria rozmów, które odsłaniają przepaść między panami a chłopami."
     },
     {
         "id": 8,
-        "question": "Co uosabia Zjawa Widma ukazująca się Marysi?",
+        "question": "Kim jest Widmo, które ukazuje się Marysi?",
         "options": [
-            "Tęsknotę za zmarłym ukochanym (malarzem L. de Laveaux)",
-            "Lęk przed krwawą rzezią chłopską",
-            "Przepowiednię o rychłym końcu świata"
+            "Jej zmarłym narzeczonym, malarzem (pierwowzór: Ludwik de Laveaux)",
+            "Duchem Jakuba Szeli, przywódcy rabacji",
+            "Legendarnym wieszczem Wernyhorą"
         ],
-        "answer": 0
+        "answer": 0,
+        "explanation": "Widmo przypomina dawną miłość Marysi, ale bije od niego chłód grobu – przeszłości nie da się wskrzesić."
     },
     {
         "id": 9,
-        "question": "Co Gospodyni ze strachu postanawia ukryć w skrzyni?",
+        "question": "Co Gospodyni chowa do skrzyni?",
         "options": [
             "Złoty róg, by nikt go nie ukradł",
-            "Złotą podkowę, którą uważa za prywatne szczęście",
-            "Kadyceusz, który wręczył Stańczyk"
+            "Złotą podkowę zgubioną przez konia Wernyhory",
+            "Kaduceusz, który wręczył Stańczyk"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Podkowę znajduje Staszek, a Gospodyni chowa ją „na zaś” – dobro domu przedkłada nad sprawę narodu."
     },
     {
         "id": 10,
-        "question": "Czego symbolem jest Kadyceusz przekazany Dziennikarzowi?",
+        "question": "Czego symbolem jest kaduceusz, który Stańczyk wręcza Dziennikarzowi?",
         "options": [
-            "Przewodnictwa ideowego nad narodem",
-            "Niewoli i poddaństwa",
+            "Przewodnictwa duchowego nad narodem – danego komuś, kto go nie udźwignie",
+            "Niewoli i poddaństwa wobec zaborców",
             "Czystej, niespełnionej miłości"
         ],
-        "answer": 0
+        "answer": 0,
+        "explanation": "Kaduceusz (laska Hermesa) to znak władzy i przewodnictwa. Stańczyk każe nim „mącić” narodową kadź – ironicznie, bo Dziennikarz jest bierny."
     },
     {
         "id": 11,
@@ -107,47 +117,52 @@
             "Jakub Szela, przywódca rabacji galicyjskiej",
             "Kazimierz Wielki"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Upiór to Jakub Szela, który w 1846 r. poprowadził chłopską rzeź szlachty. Ukazuje się Dziadowi (akt II, sc. 15)."
     },
     {
         "id": 12,
-        "question": "Co w utworze oznacza „chłopomania”?",
+        "question": "Co w kontekście „Wesela” oznacza chłopomania?",
         "options": [
-            "Głęboką i autentyczną chęć pomocy na wsi",
-            "Powierzchowne fascynowanie się folklorem i wsią przez inteligencję",
+            "Głęboką i autentyczną pracę u podstaw na wsi",
+            "Powierzchowną fascynację wsią i folklorem wśród inteligencji",
             "Chorobę rozprzestrzeniającą się wśród chłopów"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Chłopomania była modą młodopolskiej inteligencji – zachwytem nad strojem i obyczajem, który nie szedł w parze ze zrozumieniem wsi."
     },
     {
         "id": 13,
-        "question": "Jaką informację przynosi Wernyhora?",
+        "question": "Z czym przybywa do Gospodarza Wernyhora?",
         "options": [
-            "Wieści o zbliżającej się zarazie",
-            "Rozkaz organizacji powstania narodowego",
-            "Ostrzeżenie przed zdradą Hetmana"
+            "Z wieścią o zbliżającej się zarazie",
+            "Z wezwaniem do powstania i złotym rogiem",
+            "Z ostrzeżeniem przed zdradą Hetmana"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Wernyhora każe przed świtem rozesłać gońców i zebrać ludzi, a na znak powstania daje Gospodarzowi złoty róg."
     },
     {
         "id": 14,
-        "question": "Które z poniższych słów padają z ust Chłopa, pokazując jego siłę?",
+        "question": "Kto w „Weselu” mówi: „Chłop potęgą jest i basta”?",
         "options": [
-            "„Pospolicie to pany, wy – ptaki, my – orłany”",
-            "„Niech na całym świecie wojna, byle polska wieś zaciszna, byle polska wieś spokojna”",
-            "„Chłop potęgą jest i basta”"
+            "Czepiec, grożąc panom",
+            "Gospodarz, w rozmowie z Poetą",
+            "Jasiek, wyruszając z rogiem"
         ],
-        "answer": 2
+        "answer": 1,
+        "explanation": "Te słowa wypowiada Gospodarz (akt I) – to inteligent wyraża wiarę w siłę ludu, którą akt III wystawi na próbę."
     },
     {
         "id": 15,
         "question": "W jaki sposób kończy się dramat „Wesele”?",
         "options": [
             "Chłopi wyruszają do boju pod wodzą Gospodarza",
-            "Zjawia się carskie wojsko i aresztuje zebranych",
+            "Zjawia się austriackie wojsko i aresztuje zebranych",
             "Bohaterowie zapadają w letargiczny, chocholi taniec"
         ],
-        "answer": 2
+        "answer": 2,
+        "explanation": "O świcie zamiast dźwięku rogu rozlega się muzyka Chochoła, a zebrani tańczą jak w transie."
     },
     {
         "id": 16,
@@ -157,7 +172,8 @@
             "Jana III Sobieskiego, symbol obrony chrześcijaństwa",
             "Stefana Czarnieckiego, symbol waleczności"
         ],
-        "answer": 0
+        "answer": 0,
+        "explanation": "Hetman Branicki był jednym z przywódców konfederacji targowickiej (1792). W akcie II drwi z chłopomanii Pana Młodego."
     },
     {
         "id": 17,
@@ -167,36 +183,370 @@
             "Marazm i letarg, ale też ukrytą nadzieję na odrodzenie (żywą różę)",
             "Chytrość i podstęp zaborców"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Chochoł to krzak róży okryty na zimę słomą – uśpiony, ale żywy. Wiosną może zakwitnąć."
     },
     {
         "id": 18,
-        "question": "Z którym bohaterem rozmawia Rycerz Czarny?",
+        "question": "Komu ukazuje się Rycerz Czarny?",
         "options": [
-            "Z Poetą",
-            "Z Panem Młodym",
-            "Z Dziennikarzem"
+            "Poecie",
+            "Panu Młodemu",
+            "Dziennikarzowi"
         ],
-        "answer": 0
+        "answer": 0,
+        "explanation": "Rycerz – Zawisza Czarny – przychodzi do Poety (akt II, sc. 9). Pod jego przyłbicą Poeta widzi pustkę."
     },
     {
         "id": 19,
-        "question": "Jaką funkcję pełni postać Racheli w dramacie?",
+        "question": "Jaką rolę odgrywa w dramacie Rachela?",
         "options": [
             "Reprezentuje interesy chłopstwa",
-            "Wprowadza aurę poezji, tajemniczości i symbolizmu, zaprasza Chochoła",
+            "Wnosi aurę poezji i podsuwa myśl o zaproszeniu Chochoła",
             "Jest uosobieniem pragmatyzmu i odrzuca wszelką poezję"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Córka karczmarza, zafascynowana poezją, inspiruje Poetę, a ten namawia Pana Młodego, by zaprosił na wesele chochoła."
     },
     {
         "id": 20,
-        "question": "Dlaczego inteligencja w „Weselu” jest oceniana negatywnie?",
+        "question": "Dlaczego inteligencja w „Weselu” oceniona jest krytycznie?",
         "options": [
             "Ponieważ zbrojnie zaatakowała chłopów",
-            "Ponieważ jest bierna, zagubiona i niezdolna do czynu i przewodnictwa",
+            "Ponieważ jest bierna, zagubiona i niezdolna do przywództwa",
             "Ponieważ odmówiła udziału w weselu"
         ],
-        "answer": 1
+        "answer": 1,
+        "explanation": "Panowie mówią pięknie, ale gdy przychodzi czas czynu, zawodzą – Gospodarz zasypia i zapomina o misji."
+    },
+    {
+        "id": 21,
+        "question": "Kiedy odbył się ślub, który zainspirował Wyspiańskiego?",
+        "options": [
+            "20 listopada 1900 r.",
+            "3 maja 1891 r.",
+            "16 marca 1901 r."
+        ],
+        "answer": 0,
+        "explanation": "Ślub Rydla i Mikołajczykówny odbył się 20 listopada 1900 r. Data 16 marca 1901 r. to dzień prapremiery dramatu."
+    },
+    {
+        "id": 22,
+        "question": "Gdzie i kiedy odbyła się prapremiera „Wesela”?",
+        "options": [
+            "W Teatrze Miejskim w Krakowie, 16 marca 1901 r.",
+            "W Teatrze Wielkim w Warszawie, w 1905 r.",
+            "We Lwowie, w dniu ślubu Rydla"
+        ],
+        "answer": 0,
+        "explanation": "Prapremiera odbyła się w dzisiejszym Teatrze im. Juliusza Słowackiego i wywołała sensację – widzowie rozpoznawali pierwowzory postaci."
+    },
+    {
+        "id": 23,
+        "question": "Kto był pierwowzorem Gospodarza?",
+        "options": [
+            "Kazimierz Przerwa-Tetmajer",
+            "Włodzimierz Tetmajer",
+            "Rudolf Starzewski"
+        ],
+        "answer": 1,
+        "explanation": "Malarz Włodzimierz Tetmajer ożenił się z Anną Mikołajczykówną, siostrą panny młodej, i osiadł w Bronowicach. Jego przyrodni brat Kazimierz to pierwowzór Poety."
+    },
+    {
+        "id": 24,
+        "question": "Kto był pierwowzorem Poety?",
+        "options": [
+            "Kazimierz Przerwa-Tetmajer",
+            "Lucjan Rydel",
+            "Tadeusz Boy-Żeleński"
+        ],
+        "answer": 0,
+        "explanation": "Kazimierz Przerwa-Tetmajer był jednym z najsłynniejszych poetów-dekadentów Młodej Polski."
+    },
+    {
+        "id": 25,
+        "question": "Kto był pierwowzorem Dziennikarza?",
+        "options": [
+            "Rudolf Starzewski, redaktor krakowskiego „Czasu”",
+            "Tadeusz Noskowski, malarz",
+            "Jacenty Mikołajczyk, gospodarz z Bronowic"
+        ],
+        "answer": 0,
+        "explanation": "Starzewski kierował konserwatywnym „Czasem” – dlatego to jemu ukazuje się Stańczyk, patron krakowskich konserwatystów."
+    },
+    {
+        "id": 26,
+        "question": "Który akt „Wesela” ma charakter fantastyczny (wizyjny)?",
+        "options": [
+            "Akt I",
+            "Akt II",
+            "Akt III"
+        ],
+        "answer": 1,
+        "explanation": "W akcie II, po północy, bohaterom ukazują się zjawy. Akt I jest realistyczny, a akt III łączy oba plany."
+    },
+    {
+        "id": 27,
+        "question": "Kto jako pierwszy widzi Chochoła?",
+        "options": [
+            "Isia, córka Gospodarza",
+            "Panna Młoda",
+            "Dziad"
+        ],
+        "answer": 0,
+        "explanation": "Akt II otwiera spotkanie Isi z Chochołem: „Kto mnie wołał, czego chciał…”."
+    },
+    {
+        "id": 28,
+        "question": "Kto zaprasza Chochoła na wesele?",
+        "options": [
+            "Pan Młody, za namową Poety zainspirowanego przez Rachelę",
+            "Gospodyni, by odstraszyć złe duchy",
+            "Czepiec, na znak rozpoczęcia powstania"
+        ],
+        "answer": 0,
+        "explanation": "Pan Młody otwiera okno i zaprasza chochoła stojącego w sadzie, a Panna Młoda dla żartu powtarza zaproszenie."
+    },
+    {
+        "id": 29,
+        "question": "Co widzi Poeta pod przyłbicą Rycerza?",
+        "options": [
+            "Twarz Zawiszy Czarnego",
+            "Pustkę",
+            "Oblicze Wernyhory"
+        ],
+        "answer": 1,
+        "explanation": "Pustka pod przyłbicą to odbicie duchowej pustki Poety – dekadenta, który marzy o czynie, ale nie ma na niego sił."
+    },
+    {
+        "id": 30,
+        "question": "Z czego drwi Hetman w rozmowie z Panem Młodym?",
+        "options": [
+            "Z jego małżeństwa z chłopką i „bratania się” z ludem",
+            "Z jego słabego talentu poetyckiego",
+            "Z jego lęku przed zaborcami"
+        ],
+        "answer": 0,
+        "explanation": "Hetman obnaża powierzchowność chłopomanii Pana Młodego (akt II, sc. 11–13)."
+    },
+    {
+        "id": 31,
+        "question": "O co Upiór prosi Dziada?",
+        "options": [
+            "O wodę, by zmyć z siebie krew",
+            "O złoty róg",
+            "O przebaczenie w imieniu szlachty"
+        ],
+        "answer": 0,
+        "explanation": "Szela chce wejść na wesele, ale piętna na czole nie da się zmyć. Przerażony Dziad przegania zjawę."
+    },
+    {
+        "id": 32,
+        "question": "Kto znajduje złotą podkowę zgubioną przez konia Wernyhory?",
+        "options": [
+            "Staszek",
+            "Jasiek",
+            "Isia"
+        ],
+        "answer": 0,
+        "explanation": "Staszek przynosi podkowę do izby, a Gospodyni chowa ją do malowanej skrzyni „na zaś”."
+    },
+    {
+        "id": 33,
+        "question": "Komu Gospodarz powierza złoty róg i misję zwołania chłopów?",
+        "options": [
+            "Jaśkowi",
+            "Czepcowi",
+            "Kasprowi"
+        ],
+        "answer": 0,
+        "explanation": "Gospodarz przerzuca obowiązek na młodego drużbę i każe mu wrócić, zanim kur zapieje po raz trzeci."
+    },
+    {
+        "id": 34,
+        "question": "Co dzieje się z Gospodarzem po przebudzeniu w akcie III?",
+        "options": [
+            "Prowadzi chłopów na Kraków",
+            "Nie pamięta wizyty Wernyhory ani danych obietnic",
+            "Wyrusza na poszukiwanie Jaśka"
+        ],
+        "answer": 1,
+        "explanation": "Niepamięć Gospodarza to obraz inteligencji niezdolnej do czynu w decydującej chwili."
+    },
+    {
+        "id": 35,
+        "question": "Do kogo Poeta mówi: „A to Polska właśnie”?",
+        "options": [
+            "Do Panny Młodej, wskazując na jej serce",
+            "Do Racheli, wskazując na okno",
+            "Do Gospodarza, wskazując na obraz Matejki"
+        ],
+        "answer": 0,
+        "explanation": "W akcie III (sc. 16) Poeta każe Pannie Młodej położyć rękę na sercu: Polska żyje w sercach ludzi."
+    },
+    {
+        "id": 36,
+        "question": "Z czym w akcie III chłopi stają do walki?",
+        "options": [
+            "Z karabinami przemyconymi z Krakowa",
+            "Z kosami ustawionymi na sztorc",
+            "Z szablami zdjętymi ze ściany"
+        ],
+        "answer": 1,
+        "explanation": "Kosy przywołują pamięć kosynierów spod Racławic (1794) i pokazują gotowość ludu do czynu."
+    },
+    {
+        "id": 37,
+        "question": "O co na początku dramatu Czepiec pyta Dziennikarza?",
+        "options": [
+            "O ceny zboża na krakowskim rynku",
+            "O politykę: „Cóż tam, panie, w polityce?”",
+            "O to, kiedy zaczną się oczepiny"
+        ],
+        "answer": 1,
+        "explanation": "Czepiec interesuje się światem („Chińczyki trzymają się mocno!?”), a Dziennikarz go lekceważy."
+    },
+    {
+        "id": 38,
+        "question": "Kto wypowiada słowa: „Niech na całym świecie wojna, byle polska wieś zaciszna, byle polska wieś spokojna”?",
+        "options": [
+            "Dziennikarz",
+            "Czepiec",
+            "Ksiądz"
+        ],
+        "answer": 0,
+        "explanation": "To słowa Dziennikarza z aktu I (sc. 1) – inteligent chce, by wieś pozostała sielanką z dala od polityki."
+    },
+    {
+        "id": 39,
+        "question": "Które wydarzenie historyczne przypomina Upiór?",
+        "options": [
+            "Insurekcję kościuszkowską z 1794 r.",
+            "Rabację galicyjską z 1846 r.",
+            "Powstanie styczniowe z 1863 r."
+        ],
+        "answer": 1,
+        "explanation": "Upiór to Jakub Szela – przywódca chłopskiej rzezi szlachty w Galicji w 1846 r."
+    },
+    {
+        "id": 40,
+        "question": "Kim był Wernyhora?",
+        "options": [
+            "Legendarnym ukraińskim lirnikiem, wieszczem odrodzenia Polski",
+            "Kozackim hetmanem, który zdradził Rzeczpospolitą",
+            "Krakowskim malarzem, przyjacielem Gospodarza"
+        ],
+        "answer": 0,
+        "explanation": "Wernyhora był bohaterem legend i dzieł romantyków, a także obrazu Jana Matejki, którego reprodukcja wisi w izbie."
+    },
+    {
+        "id": 41,
+        "question": "Kogo przedstawia Rycerz Czarny?",
+        "options": [
+            "Zawiszę Czarnego z Garbowa",
+            "Stefana Czarnieckiego",
+            "Jana Zamoyskiego"
+        ],
+        "answer": 0,
+        "explanation": "Zawisza Czarny, rycerz spod Grunwaldu, to symbol siły i rycerskiej sławy."
+    },
+    {
+        "id": 42,
+        "question": "Do jakiego gatunku należy „Wesele”?",
+        "options": [
+            "Dramatu symbolicznego (neoromantycznego)",
+            "Komedii dell'arte",
+            "Tragedii antycznej"
+        ],
+        "answer": 0,
+        "explanation": "Realistyczne wesele przenika się ze światem fantastycznym, a postacie i przedmioty mają symboliczne znaczenia."
+    },
+    {
+        "id": 43,
+        "question": "Czego symbolem jest czapka z pawich piór?",
+        "options": [
+            "Pychy, próżności i przedkładania spraw błahych nad narodowe",
+            "Chłopskiej odwagi i gotowości do walki",
+            "Władzy królewskiej"
+        ],
+        "answer": 0,
+        "explanation": "Dla czapki Jasiek gubi złoty róg – prywata wygrywa z dobrem ojczyzny."
+    },
+    {
+        "id": 44,
+        "question": "Co zostaje Jaśkowi po zgubieniu złotego rogu?",
+        "options": [
+            "Sznur",
+            "Złota podkowa",
+            "Kaduceusz"
+        ],
+        "answer": 0,
+        "explanation": "„Ostał ci się ino sznur” – sznur to znak niewoli, bezsilności i zmarnowanej szansy."
+    },
+    {
+        "id": 45,
+        "question": "Kto wyreżyserował ekranizację „Wesela” z 1972 roku?",
+        "options": [
+            "Andrzej Wajda",
+            "Krzysztof Kieślowski",
+            "Wojciech Smarzowski"
+        ],
+        "answer": 0,
+        "explanation": "W filmie Wajdy Pana Młodego zagrał Daniel Olbrychski. Wojciech Smarzowski nakręcił w 2004 r. zupełnie inny film o tym samym tytule."
+    },
+    {
+        "id": 46,
+        "question": "Którą zasadę dramatu klasycznego zachowuje Wyspiański?",
+        "options": [
+            "Jedność czasu i miejsca",
+            "Podział na pięć aktów",
+            "Zakaz łączenia tragizmu z komizmem"
+        ],
+        "answer": 0,
+        "explanation": "Akcja toczy się w jednej izbie w ciągu jednej nocy. Wyspiański łączy jednak tragizm z komizmem, a akcja jest luźna i epizodyczna."
+    },
+    {
+        "id": 47,
+        "question": "Czyje reprodukcje obrazów wiszą według didaskaliów na ścianach izby?",
+        "options": [
+            "Jana Matejki – „Wernyhora” i „Kościuszko pod Racławicami”",
+            "Jacka Malczewskiego – „Melancholia” i „Błędne koło”",
+            "Artura Grottgera – cykl „Polonia”"
+        ],
+        "answer": 0,
+        "explanation": "Obrazy w izbie zapowiadają tematy narodowe: Wernyhora pojawi się w akcie II, a kosy – w akcie III."
+    },
+    {
+        "id": 48,
+        "question": "Kto był pierwowzorem Panny Młodej?",
+        "options": [
+            "Jadwiga Mikołajczykówna",
+            "Zofia Pareńska",
+            "Anna Rydlówna"
+        ],
+        "answer": 0,
+        "explanation": "Jadwiga Mikołajczykówna, córka gospodarza z Bronowic Małych, poślubiła Lucjana Rydla. Zofia Pareńska to pierwowzór Zosi, a Anna Rydlówna – Haneczki."
+    },
+    {
+        "id": 49,
+        "question": "Jak nazywa się cecha gwarowa widoczna w słowach „nase” (nasze) czy „cóz” (cóż)?",
+        "options": [
+            "Mazurzenie",
+            "Akanie",
+            "Pochylenie samogłosek"
+        ],
+        "answer": 0,
+        "explanation": "Mazurzenie to wymowa s, z, c zamiast sz, ż, cz – typowa dla gwar małopolskich, którymi mówią chłopi w „Weselu”. Pochylenie to inna cecha, np. „jo” zamiast „ja”."
+    },
+    {
+        "id": 50,
+        "question": "Kto opisał prawdziwe pierwowzory postaci „Wesela” w szkicu „Plotka o »Weselu« Wyspiańskiego”?",
+        "options": [
+            "Tadeusz Boy-Żeleński",
+            "Stefan Żeromski",
+            "Lucjan Rydel"
+        ],
+        "answer": 0,
+        "explanation": "Boy-Żeleński znał to środowisko od środka – jego żoną została Zofia Pareńska, czyli dramatowa Zosia."
     }
 ]

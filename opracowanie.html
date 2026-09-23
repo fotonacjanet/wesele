@@ -4,144 +4,712 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesele - Opracowanie Lektury</title>
+    <meta name="description" content="Opracowanie „Wesela” Wyspiańskiego: geneza, czas i miejsce akcji, kompozycja, streszczenie aktów, plan wydarzeń, bohaterowie i pierwowzory, zjawy, symbole, problematyka, cytaty i ściąga maturalna.">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <div class="container fade-in">
-    <h1>Wesele</h1>
+    <h1 id="top">Wesele</h1>
     <div class="ornament">❦ ❧ ❦</div>
-    <h3 style="text-align: center; border: none; margin-top: -10px;">Stanisława Wyspiańskiego</h3>
+    <p class="subtitle">Stanisława Wyspiańskiego</p>
 
     <!-- Nawigacja -->
-    <nav>
+    <nav class="site-nav" aria-label="Menu główne">
         <ul>
             <li><a href="index.html">Strona Główna</a></li>
-            <li><a href="opracowanie.html">Opracowanie Lektury</a></li>
+            <li><a href="opracowanie.html" aria-current="page">Opracowanie Lektury</a></li>
             <li><a href="quiz.html">Egzamin (Quiz)</a></li>
         </ul>
     </nav>
 
-    <div class="section fade-in" id="edukacja">
+    <div class="section" id="edukacja">
         <h2>Wiedza Złotym Rogiem</h2>
-        
+
         <div class="box">
-            Utwór oparty na autentycznym weselu poety Lucjana Rydla z chłopką Jadwigą Mikołajczykówną, które odbyło się w listopadzie 1900 r. 
-            Akcja toczy się w krakowskich Bronowicach, w dworku Włodzimierza Tetmajera. "Wesele" to dramat neoromantyczny i symboliczny.
+            Utwór oparty na autentycznym weselu poety Lucjana Rydla z chłopką Jadwigą Mikołajczykówną, które odbyło się 20 listopada 1900 r.
+            Akcja toczy się w podkrakowskich Bronowicach Małych, w domu malarza Włodzimierza Tetmajera. „Wesele” to dramat symboliczny, który z jednej nocy weselnej czyni diagnozę całego narodu.
         </div>
 
-        <div class="quote-box fade-in">
+        <div class="quote-box">
             Niech na całym świecie wojna, byle polska wieś zaciszna, byle polska wieś spokojna.
+            <span class="quote-author">— Dziennikarz, akt I</span>
         </div>
 
-        <h3>I. Chłopomania a rzeczywistość</h3>
-        <p>
-            Młodopolska inteligencja fascynowała się wsią (tzw. <strong>chłopomania</strong>). Krakowscy mieszczanie, tacy jak Pan Młody, zachwycali się kolorowymi strojami i rzekomo bliskim natury życiem chłopów. Była to jednak fascynacja powierzchowna. W istocie, chłopi i inteligencja kompletnie się nie rozumieli, a inteligenci często odnosili się do chłopstwa z góry, nie dostrzegając w nich pełnoprawnych obywateli gotowych do walki o wolność ojczyzny. 
-        </p>
+        <!-- Spis treści -->
+        <nav class="toc" aria-labelledby="spis">
+            <h3 id="spis">Spis treści</h3>
+            <ol>
+                <li><a href="#wprowadzenie">Wprowadzenie</a>
+                    <ul>
+                        <li><a href="#karta">Karta lektury</a></li>
+                        <li><a href="#geneza">Geneza utworu</a></li>
+                        <li><a href="#czas-miejsce">Czas i miejsce akcji</a></li>
+                        <li><a href="#gatunek">Gatunek i kompozycja</a></li>
+                    </ul>
+                </li>
+                <li><a href="#fabula">Fabuła</a>
+                    <ul>
+                        <li><a href="#streszczenie">Streszczenie akt po akcie</a></li>
+                        <li><a href="#plan">Plan wydarzeń</a></li>
+                    </ul>
+                </li>
+                <li><a href="#bohaterowie">Bohaterowie</a>
+                    <ul>
+                        <li><a href="#pierwowzory">Postacie i pierwowzory</a></li>
+                        <li><a href="#charakterystyki">Charakterystyki</a></li>
+                        <li><a href="#chlopomania">Chłopomania a rzeczywistość</a></li>
+                    </ul>
+                </li>
+                <li><a href="#swiat-symboli">Świat symboli</a>
+                    <ul>
+                        <li><a href="#zjawy">Zjawy – osoby dramatu</a></li>
+                        <li><a href="#rekwizyty">Rekwizyty i symbole</a></li>
+                        <li><a href="#chocholi-taniec">Chocholi taniec</a></li>
+                    </ul>
+                </li>
+                <li><a href="#interpretacja">Interpretacja</a>
+                    <ul>
+                        <li><a href="#problematyka">Problematyka</a></li>
+                        <li><a href="#motywy">Motywy literackie</a></li>
+                        <li><a href="#jezyk">Język i styl</a></li>
+                        <li><a href="#tlo">Tło historyczne</a></li>
+                    </ul>
+                </li>
+                <li><a href="#matura">Przed maturą</a>
+                    <ul>
+                        <li><a href="#cytaty">Najważniejsze cytaty</a></li>
+                        <li><a href="#recepcja">Recepcja i konteksty</a></li>
+                        <li><a href="#sciaga">Ściąga maturalna</a></li>
+                        <li><a href="#slowniczek">Słowniczek pojęć</a></li>
+                    </ul>
+                </li>
+            </ol>
+        </nav>
 
-        <div class="knowledge-capsule fade-in">
-            <h4>Infografika: Zderzenie dwóch światów</h4>
-            <ul>
-                <li><strong>Inteligencja (Panowie):</strong> Bierni, pogrążeni w melancholii, marzycielstwie i sztuce dla sztuki. Wykształceni, ale sparaliżowani przez narodowe kompleksy i dekadentyzm. Zdolni jedynie do wielkich słów.</li>
-                <li><strong>Chłopi:</strong> Gotowi do działania, pełni tężyzny fizycznej ("Chłop potęgą jest i basta"). Chcą walki, ale potrzebują duchowego i militarnego przywództwa, którego elity odmawiają im dać.</li>
+        <!-- ============ I. WPROWADZENIE ============ -->
+        <section id="wprowadzenie">
+            <h2>I. Wprowadzenie</h2>
+
+            <h3 id="karta">Karta lektury</h3>
+            <dl class="facts">
+                <dt>Autor</dt>
+                <dd>Stanisław Wyspiański (1869–1907) – dramatopisarz, poeta, malarz, grafik i projektant witraży, twórca idei „teatru ogromnego”, nazywany „czwartym wieszczem”</dd>
+                <dt>Epoka</dt>
+                <dd>Młoda Polska (modernizm)</dd>
+                <dt>Rodzaj i gatunek</dt>
+                <dd>dramat; dramat symboliczny (neoromantyczny), zwany też dramatem narodowym</dd>
+                <dt>Powstanie</dt>
+                <dd>przełom 1900 i 1901 r.; prapremiera 16 marca 1901 r. w Teatrze Miejskim w Krakowie (dziś Teatr im. Juliusza Słowackiego)</dd>
+                <dt>Czas akcji</dt>
+                <dd>jedna listopadowa noc 1900 r. – od wieczora do świtu</dd>
+                <dt>Miejsce akcji</dt>
+                <dd>izba w domu Gospodarza w Bronowicach Małych pod Krakowem</dd>
+                <dt>Budowa</dt>
+                <dd>trzy akty (38, 30 i 37 scen), tekst pisany wierszem</dd>
+                <dt>Kluczowe symbole</dt>
+                <dd>Chochoł, złoty róg, czapka z pawich piór, sznur, złota podkowa, kosy, chocholi taniec</dd>
+            </dl>
+
+            <h3 id="geneza">Geneza utworu</h3>
+            <p>
+                20 listopada 1900 r. w kościele Mariackim w Krakowie poeta Lucjan Rydel poślubił Jadwigę Mikołajczykównę, córkę gospodarza z podkrakowskich Bronowic Małych. Wesele odbyło się w Bronowicach, w domu malarza Włodzimierza Tetmajera, który wcześniej ożenił się z Anną – siostrą panny młodej. Przy jednym stole spotkały się dwa światy: krakowska inteligencja i artyści oraz bronowiccy chłopi.
+            </p>
+            <p>
+                Wśród gości był Stanisław Wyspiański – szkolny przyjaciel pana młodego. To, co zobaczył i usłyszał tej nocy, stało się kanwą dramatu. Tempo pracy było niezwykłe: prapremiera odbyła się już 16 marca 1901 r. w Teatrze Miejskim w Krakowie (reżyserował Adolf Walewski we współpracy z autorem), a wydanie książkowe ukazało się wiosną tego samego roku.
+            </p>
+            <p>
+                Spektakl wywołał sensację. Widzowie bez trudu rozpoznawali w bohaterach prawdziwych uczestników wesela – znane postacie krakowskiego środowiska artystycznego i mieszkańców Bronowic. Klucz do postaci opisał później Tadeusz Boy-Żeleński w słynnym szkicu „Plotka o »Weselu« Wyspiańskiego”.
+            </p>
+
+            <div class="knowledge-capsule">
+                <h4>Dlaczego to ważne?</h4>
+                <p>Małżeństwo Rydla było głośnym przejawem <strong>chłopomanii</strong> – modnej wśród młodopolskiej inteligencji fascynacji wsią. Wyspiański nie pisze jednak reportażu z wesela: prawdziwe przyjęcie staje się pretekstem do rozrachunku z całym społeczeństwem polskim, jego historią i narodowymi mitami.</p>
+            </div>
+
+            <h3 id="czas-miejsce">Czas i miejsce akcji</h3>
+            <p>
+                <strong>Miejsce:</strong> izba w domu Gospodarza w Bronowicach Małych pod Krakowem. Za ścianą trwa zabawa – słychać muzykę i przytupy tańczących – a do izby goście przychodzą, by odpocząć i porozmawiać. Za oknem jest sad, a w nim krzak róży okryty na zimę słomą: chochoł.
+            </p>
+            <p>
+                <strong>Czas:</strong> jedna listopadowa noc 1900 r. – od późnego wieczora (akt I), przez północ i godziny nocne (akt II), aż do świtu (akt III). Czas akcji niemal pokrywa się z czasem trwania wesela.
+            </p>
+            <p>
+                Wyspiański – z wykształcenia malarz – drobiazgowo opisuje w didaskaliach wnętrze izby. Ściany są bielone na siwo, niemal błękitnie, a wiszą na nich obrazy Matki Boskiej Częstochowskiej i Ostrobramskiej oraz reprodukcje dzieł Jana Matejki: „Wernyhora” i „Kościuszko pod Racławicami”. Już scenografia zapowiada więc tematy wiary, historii i narodowego zrywu, które powrócą w kolejnych aktach.
+            </p>
+
+            <div class="knowledge-capsule">
+                <h4>Symbolika czasu i miejsca</h4>
+                <ul>
+                    <li><strong>Izba</strong> to mikrokosmos Polski – spotykają się w niej wszystkie stany, a na ścianach wisi narodowa historia i wiara.</li>
+                    <li><strong>Listopad</strong> to w polskiej tradycji miesiąc zrywów niepodległościowych (powstanie listopadowe 1830 r.).</li>
+                    <li><strong>Kraków</strong> leżał w zaborze austriackim, w autonomicznej Galicji – miał względną swobodę kulturalną, ale nie niepodległość.</li>
+                    <li><strong>Noc</strong> to czas snów, zjaw i ujawniania ukrytych myśli, a <strong>świt</strong> – czas próby i rozczarowania.</li>
+                </ul>
+            </div>
+
+            <h3 id="gatunek">Gatunek i kompozycja</h3>
+            <p>
+                „Wesele” to <strong>dramat symboliczny</strong> (neoromantyczny), nazywany też <strong>dramatem narodowym</strong>. Realistycznie odmalowane wesele przenika się tu ze światem fantastycznym, a postacie, przedmioty i gesty mają wieloznaczne, symboliczne sensy. Wyspiański sięga po tradycję romantyczną – zjawy przywołują skojarzenia z „Dziadami”, a Wernyhora pojawiał się m.in. u Słowackiego – ale prowadzi z nią polemikę.
+            </p>
+            <p>
+                Kompozycja przypomina <strong>krakowską szopkę</strong>: postacie wchodzą do izby parami, rozmawiają i znikają jak kukiełki. Wyspiański zachowuje klasyczną <strong>jedność czasu i miejsca</strong>, ale akcja jest luźna i składa się z wielu epizodów. Słowo łączy się tu z muzyką, tańcem, światłem i plastyczną scenografią – zgodnie z ideą <strong>syntezy sztuk</strong> („teatru ogromnego”).
+            </p>
+
+            <div class="acts-grid">
+                <div class="act-card">
+                    <h4>Akt I · 38 scen</h4>
+                    <span class="act-type">realistyczny</span>
+                    <p>Późny wieczór. Rozmowy gości odsłaniają podziały społeczne, chłopomanię i wzajemne niezrozumienie. Na koniec Pan Młody zaprasza na wesele Chochoła.</p>
+                </div>
+                <div class="act-card">
+                    <h4>Akt II · 30 scen</h4>
+                    <span class="act-type">fantastyczny (wizyjny)</span>
+                    <p>Po północy bohaterom ukazują się zjawy – odbicia ich lęków, win i marzeń. Wernyhora przynosi wezwanie do czynu i złoty róg.</p>
+                </div>
+                <div class="act-card">
+                    <h4>Akt III · 37 scen</h4>
+                    <span class="act-type">realistyczno-fantastyczny</span>
+                    <p>Świt. Chłopi z kosami czekają na znak, panowie zawodzą, Jasiek gubi róg. Dramat zamyka chocholi taniec.</p>
+                </div>
+            </div>
+
+            <div class="knowledge-capsule">
+                <h4>Klamra kompozycyjna</h4>
+                <p>Dramat otwiera i zamyka taniec: radosna zabawa weselna z początku zamienia się w finale w senny, bezwolny chocholi taniec. Między nimi rozgrywa się historia wielkiej dziejowej szansy – i jej zaprzepaszczenia.</p>
+            </div>
+        </section>
+
+        <!-- ============ II. FABUŁA ============ -->
+        <section id="fabula">
+            <h2>II. Fabuła</h2>
+
+            <h3 id="streszczenie">Streszczenie akt po akcie</h3>
+
+            <details class="act" open>
+                <summary>Akt I <span class="act-tag">– realistyczny, późny wieczór</span></summary>
+                <div class="act-body">
+                    <p>Do izby obok sali tanecznej zaglądają kolejni goście. Rozmowa za rozmową odsłania dwa światy, które spotkały się na weselu, ale wcale się nie rozumieją. Najważniejsze rozmowy:</p>
+                    <ul>
+                        <li><strong>Czepiec i Dziennikarz.</strong> Chłop pyta o politykę: „Cóż tam, panie, w polityce? Chińczyki trzymają się mocno!?”. Dziennikarz zbywa go i wyznaje, że od wsi oczekuje tylko spokoju: „Niech na całym świecie wojna, byle polska wieś zaciszna, byle polska wieś spokojna”.</li>
+                        <li><strong>Radczyni i Klimina.</strong> Pani z miasta rozmawia z chłopką z wyższością i niezrozumieniem – obie strony niewiele o sobie wiedzą.</li>
+                        <li><strong>Pan Młody i Panna Młoda.</strong> Są zakochani, ale żyją w innych wyobrażeniach: on zachwyca się wsią jak pięknym obrazem, ona patrzy na świat prosto i praktycznie.</li>
+                        <li><strong>Poeta i Maryna.</strong> Poeta-dekadent flirtuje, rozprawiając o miłości i sztuce – jego słowa brzmią pięknie, ale pusto.</li>
+                        <li><strong>Gospodarz i Poeta.</strong> Gospodarz, który od lat żyje na wsi, wierzy w siłę chłopów: „Chłop potęgą jest i basta”.</li>
+                        <li><strong>Rachela i Poeta.</strong> Córka karczmarza, zafascynowana poezją, widzi w weselu baśniowy nastrój. Z jej inspiracji Poeta namawia Pana Młodego, by zaprosił na wesele wszystkie „dziwy” – także chochoła stojącego w sadzie. Pan Młody otwiera okno i zaprasza Chochoła, a Panna Młoda dla żartu powtarza zaproszenie.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="act">
+                <summary>Akt II <span class="act-tag">– fantastyczny, po północy</span></summary>
+                <div class="act-body">
+                    <p>Na zaproszenie z aktu I przychodzi Chochoł – i sprowadza na wesele „gości” z innego świata. Każda zjawa ukazuje się temu, kto nosi ją w swoich myślach.</p>
+                    <ul>
+                        <li><strong>Isia i Chochoł</strong> (sc.&nbsp;1). Córka Gospodarza jako pierwsza widzi słomianego przybysza („Kto mnie wołał, czego chciał…”) i przegania go, wołając na niego „głupi śmieciu”. Chochoł zapowiada, że przyjedzie tu „gości wiele”.</li>
+                        <li><strong>Marysia i Widmo.</strong> Siostrze Panny Młodej ukazuje się jej zmarły narzeczony, malarz. Wspomina dawną miłość, ale bije od niego chłód i zapach grobu – Marysia odtrąca zjawę; przeszłości nie da się wskrzesić.</li>
+                        <li><strong>Dziennikarz i Stańczyk</strong> (sc.&nbsp;7). Królewski błazen – symbol politycznej mądrości – wytyka Dziennikarzowi jałowość i bierność. Dziennikarz przyznaje się do zwątpienia, a Stańczyk wręcza mu kaduceusz, by nim „mącił” narodową kadź, czyli poruszał sumienia rodaków.</li>
+                        <li><strong>Poeta i Rycerz Czarny</strong> (sc.&nbsp;9). Zawisza Czarny, wcielenie rycerskiej siły i chwały Grunwaldu, przypomina Poecie o powinnościach artysty. Gdy Poeta zagląda pod przyłbicę Rycerza, widzi pustkę – odbicie własnej duchowej pustki.</li>
+                        <li><strong>Pan Młody i Hetman</strong> (sc.&nbsp;11–13). Hetman Branicki, targowiczanin cierpiący męki za zdradę, drwi z Pana Młodego – pana, który „zbratał się” z chłopstwem i ożenił z chłopką. Spotkanie obnaża powierzchowność chłopomanii.</li>
+                        <li><strong>Dziad i Upiór</strong> (sc.&nbsp;15). Zakrwawiony Jakub Szela, przywódca rabacji galicyjskiej z 1846 r., chce przyłączyć się do wesela i prosi o wodę, by zmyć z siebie krew. Piętna na czole nie da się jednak zmyć. Przerażony Dziad przegania zjawę.</li>
+                        <li><strong>Gospodarz i Wernyhora.</strong> Legendarny lirnik – ten sam, którego Gospodarz zna z obrazu Matejki na ścianie – przybywa z wezwaniem do powstania: przed świtem trzeba rozesłać gońców i zebrać ludzi z okolicznych wsi. Wręcza Gospodarzowi złoty róg, na którego głos naród ma powstać.</li>
+                        <li><strong>Po odjeździe Wernyhory.</strong> Gospodyni studzi zapał męża. Gospodarz powierza róg Jaśkowi i każe mu objechać wsie i wrócić, zanim kur zapieje po raz trzeci. Staszek znajduje złotą podkowę zgubioną przez konia Wernyhory, a Gospodyni chowa ją do malowanej skrzyni „na zaś”.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="act">
+                <summary>Akt III <span class="act-tag">– realistyczno-fantastyczny, świt</span></summary>
+                <div class="act-body">
+                    <p>Zbliża się świt. Goście są zmęczeni, a nocne zdarzenia mieszają się z jawą.</p>
+                    <ul>
+                        <li><strong>Panna Młoda i Poeta</strong> (sc.&nbsp;16). Panna Młoda opowiada sen o podróży złotą karetą do Polski i pyta, gdzie ta Polska jest. Poeta każe jej położyć rękę na sercu: „A to Polska właśnie”.</li>
+                        <li><strong>Czepiec z kosą.</strong> Chłopi rozmawiają o tajemniczym nocnym gościu i szykują się do walki. Wyrwany ze snu Gospodarz nie pamięta ani wizyty Wernyhory, ani danych obietnic. Czepiec zarzuca panom, że zamiast działać – tylko mówią.</li>
+                        <li><strong>Oczekiwanie.</strong> Chłopi z kosami ustawionymi na sztorc stoją przed chatą i nasłuchują tętentu – znaku, że nadciąga Wernyhora. Panowie są bezradni: nie potrafią ani uwierzyć, ani poprowadzić.</li>
+                        <li><strong>Powrót Jaśka.</strong> Jasiek wraca bez złotego rogu – zgubił go na rozstajach, gdy schylił się po czapkę z pawich piór. Został mu tylko sznur.</li>
+                        <li><strong>Chocholi taniec.</strong> Zamiast rogu odzywa się muzyka Chochoła. Zebrani, jak w transie, ruszają w senny, bezwolny taniec, a Jasiek na próżno próbuje ich zbudzić. Chochoł drwi: „Miałeś, chamie, złoty róg…”.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <h3 id="plan">Plan wydarzeń</h3>
+            <ol class="plan">
+                <li class="act-divider">Akt I</li>
+                <li>Goście weselni przychodzą do izby, by odpocząć od tańca.</li>
+                <li>Czepiec wypytuje Dziennikarza o politykę i zostaje zbyty.</li>
+                <li>Rozmowy par (Radczyni i Klimina, Pan Młody i Panna Młoda, Poeta i Maryna, Gospodarz i Poeta) odsłaniają przepaść między inteligencją a chłopami.</li>
+                <li>Rachela zachwyca się poetycką aurą wesela.</li>
+                <li>Za namową Poety Pan Młody zaprasza na wesele Chochoła.</li>
+                <li class="act-divider">Akt II</li>
+                <li>Po północy Chochoł ukazuje się Isi.</li>
+                <li>Marysi ukazuje się Widmo zmarłego narzeczonego.</li>
+                <li>Stańczyk rozmawia z Dziennikarzem i wręcza mu kaduceusz.</li>
+                <li>Poecie ukazuje się Rycerz – pod przyłbicą Poeta widzi pustkę.</li>
+                <li>Hetman Branicki drwi z Pana Młodego.</li>
+                <li>Upiór – Jakub Szela – nachodzi Dziada.</li>
+                <li>Wernyhora wzywa Gospodarza do powstania i wręcza mu złoty róg.</li>
+                <li>Gospodyni studzi zapał męża; Gospodarz posyła Jaśka z rogiem, by zwołał chłopów.</li>
+                <li>Staszek znajduje złotą podkowę, Gospodyni chowa ją do skrzyni.</li>
+                <li class="act-divider">Akt III</li>
+                <li>Panna Młoda opowiada Poecie swój sen; Poeta wskazuje jej serce: „A to Polska właśnie”.</li>
+                <li>Czepiec zbiera chłopów z kosami; Gospodarz nie pamięta nocnej wizyty Wernyhory.</li>
+                <li>Wszyscy nasłuchują nadejścia Wernyhory.</li>
+                <li>Jasiek wraca bez rogu – zgubił go, schylając się po czapkę z pawich piór.</li>
+                <li>Chochoł zaczyna grać, a zebrani zapadają w letargiczny chocholi taniec.</li>
+            </ol>
+        </section>
+
+        <!-- ============ III. BOHATEROWIE ============ -->
+        <section id="bohaterowie">
+            <h2>III. Bohaterowie</h2>
+
+            <h3 id="pierwowzory">Postacie i ich pierwowzory</h3>
+            <p>Niemal każda realna postać „Wesela” ma swój pierwowzór wśród gości prawdziwego wesela. Bohaterowie dzielą się na trzy grupy: goście z miasta (inteligencja), gospodarze i goście z Bronowic (chłopi) oraz „osoby dramatu”, czyli zjawy, omówione w części <a href="#zjawy">IV</a>.</p>
+
+            <div class="table-wrap">
+                <table class="table-postacie">
+                    <thead>
+                        <tr>
+                            <th scope="col">Postać</th>
+                            <th scope="col">Pierwowzór</th>
+                            <th scope="col">W dramacie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="group-row"><th colspan="3" scope="colgroup">Inteligencja – goście z miasta</th></tr>
+                        <tr><td><strong>Pan Młody</strong></td><td>Lucjan Rydel, poeta</td><td>chłopoman zakochany w żonie i w wiejskim pejzażu</td></tr>
+                        <tr><td><strong>Gospodarz</strong></td><td>Włodzimierz Tetmajer, malarz osiadły w Bronowicach</td><td>inteligent żonaty z chłopką; to jemu Wernyhora powierza złoty róg</td></tr>
+                        <tr><td><strong>Poeta</strong></td><td>Kazimierz Przerwa-Tetmajer, poeta, przyrodni brat Włodzimierza</td><td>dekadent marzący o wielkiej sztuce i czynie</td></tr>
+                        <tr><td><strong>Dziennikarz</strong></td><td>Rudolf Starzewski, redaktor krakowskiego „Czasu”</td><td>sceptyk i ironista, rozmówca Stańczyka</td></tr>
+                        <tr><td><strong>Nos</strong></td><td>Tadeusz Noskowski, malarz</td><td>pijany dekadent, obraz marazmu</td></tr>
+                        <tr><td><strong>Radczyni</strong></td><td>Antonina Domańska, pisarka (autorka „Historii żółtej ciżemki”)</td><td>pani z miasta patrząca na wieś z góry</td></tr>
+                        <tr><td><strong>Maryna, Zosia</strong></td><td>siostry Maria i Zofia Pareńskie, córki krakowskiego lekarza</td><td>panny z miasta; Maryna jest rozmówczynią Poety</td></tr>
+                        <tr><td><strong>Haneczka</strong></td><td>Anna Rydlówna, siostra pana młodego</td><td>panna z miasta</td></tr>
+                        <tr class="group-row"><th colspan="3" scope="colgroup">Chłopi – gospodarze i goście z Bronowic</th></tr>
+                        <tr><td><strong>Panna Młoda</strong></td><td>Jadwiga Mikołajczykówna</td><td>prosta, marzycielska dziewczyna ze wsi</td></tr>
+                        <tr><td><strong>Gospodyni</strong></td><td>Anna Tetmajerowa z Mikołajczyków, siostra panny młodej</td><td>praktyczna gospodyni; chowa złotą podkowę</td></tr>
+                        <tr><td><strong>Ojciec</strong></td><td>Jacenty Mikołajczyk, gospodarz z Bronowic</td><td>ojciec Panny Młodej</td></tr>
+                        <tr><td><strong>Marysia</strong></td><td>Maria Mikołajczykówna, siostra panny młodej</td><td>żona Wojtka; ukazuje się jej Widmo</td></tr>
+                        <tr><td><strong>Czepiec</strong></td><td>Błażej Czepiec, pisarz gminny z Bronowic</td><td>energiczny chłop, pierwszy gotów do walki</td></tr>
+                        <tr><td><strong>Kasper</strong></td><td>Kasper Czepiec, drużba na weselu</td><td>młody chłopak zakochany w Kasi</td></tr>
+                        <tr><td><strong>Jasiek</strong></td><td>brat panny młodej</td><td>drużba; gubi złoty róg</td></tr>
+                        <tr><td><strong>Isia</strong></td><td>Jadwiga Tetmajerówna, najstarsza córka Gospodarza</td><td>dziecko; jako pierwsza widzi Chochoła</td></tr>
+                        <tr class="group-row"><th colspan="3" scope="colgroup">Pozostali</th></tr>
+                        <tr><td><strong>Żyd</strong></td><td>Hirsz Singer, karczmarz z Bronowic</td><td>trzeźwo myślący karczmarz</td></tr>
+                        <tr><td><strong>Rachela</strong></td><td>Józefa (Pepa) Singerówna, córka Hirsza</td><td>wrażliwa na poezję; podsuwa myśl o zaproszeniu Chochoła</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">W dramacie występują też m.in. Ksiądz, Dziad, Klimina, Kasia, Staszek i Kuba – postacie epizodyczne, dopełniające obraz wiejskiego wesela.</p>
+
+            <h3 id="charakterystyki">Charakterystyki najważniejszych bohaterów</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Gospodarz</h4>
+                    <p class="card-meta">inteligent na wsi</p>
+                    <p>Malarz, który ożenił się z chłopką i osiadł na wsi – najbardziej wiarygodny łącznik między dworem a chatą. Ceni chłopów („Chłop potęgą jest i basta”) i marzy o narodowym czynie. To jemu Wernyhora powierza złoty róg – i to on zawodzi: ulega żonie, przekazuje misję Jaśkowi, zasypia, a rano nie pamięta nocnej wizyty. Uosabia inteligencję pełną dobrych chęci, ale pozbawioną siły woli.</p>
+                </div>
+                <div class="card">
+                    <h4>Pan Młody</h4>
+                    <p class="card-meta">chłopoman</p>
+                    <p>Poeta z miasta, zakochany w żonie i w wiejskim pejzażu. Chce żyć prosto, „po chłopsku”, ale jego zachwyt jest estetyczny: widzi barwne stroje, obrzędy i przyrodę, nie dostrzega biedy ani ambicji chłopów. Hetman bezlitośnie obnaża powierzchowność jego chłopomanii.</p>
+                </div>
+                <div class="card">
+                    <h4>Poeta</h4>
+                    <p class="card-meta">dekadent</p>
+                    <p>Znużony życiem uwodziciel, szukający mocnych wrażeń i wielkiego tematu. Marzy o poezji, która porwie naród, lecz pod przyłbicą Rycerza widzi pustkę. A jednak to on wypowiada jedne z najważniejszych słów dramatu: „A to Polska właśnie”.</p>
+                </div>
+                <div class="card">
+                    <h4>Dziennikarz</h4>
+                    <p class="card-meta">sceptyk</p>
+                    <p>Redaktor konserwatywnej gazety, ironista i cynik. Zbywa chłopskie pytania o politykę, a w rozmowie ze Stańczykiem przyznaje się do zwątpienia i niemocy. Dostaje kaduceusz – znak przewodnictwa – ale nie ma siły, by poprowadzić naród.</p>
+                </div>
+                <div class="card">
+                    <h4>Panna Młoda</h4>
+                    <p class="card-meta">marzycielka</p>
+                    <p>Młoda, prosta i szczera dziewczyna ze wsi. Kocha męża, choć świat jego pojęć jest jej obcy. W jej śnie o złotej karecie i w rozmowie z Poetą naiwność spotyka się z intuicją – to jej serce Poeta wskazuje jako miejsce, gdzie jest Polska.</p>
+                </div>
+                <div class="card">
+                    <h4>Czepiec</h4>
+                    <p class="card-meta">lud gotowy do walki</p>
+                    <p>Energiczny, porywczy, ciekawy świata chłop. Dopytuje o politykę, a w akcie III z kosą w ręku jako pierwszy staje do czynu i wyrzuca panom bierność. Uosabia lud, który ma siłę i wolę walki, ale nie ma przywódców.</p>
+                </div>
+                <div class="card">
+                    <h4>Jasiek</h4>
+                    <p class="card-meta">strażnik złotego rogu</p>
+                    <p>Młody drużba, któremu Gospodarz powierza złoty róg i misję zwołania chłopów. Na rozstajach schyla się po czapkę z pawich piór i gubi róg – zostaje mu „ino sznur”. Uosabia próżność i niedojrzałość, ale jego klęska obciąża także elity, które zrzuciły na niego swój obowiązek.</p>
+                </div>
+                <div class="card">
+                    <h4>Rachela</h4>
+                    <p class="card-meta">muza wesela</p>
+                    <p>Córka karczmarza, oczytana i zafascynowana młodopolską poezją. Widzi w weselu baśniowy nastrój i podsuwa Poecie myśl, by zaprosić na wesele „wszystkie dziwy” – także chochoła. Jest pomostem między planem realnym a fantastycznym.</p>
+                </div>
+                <div class="card">
+                    <h4>Gospodyni</h4>
+                    <p class="card-meta">zdrowy rozsądek</p>
+                    <p>Praktyczna, gospodarna, twardo stąpająca po ziemi. Studzi zapał męża po wizycie Wernyhory, a złotą podkowę chowa do skrzyni „na zaś”. Przedkłada dobro domu nad sprawę narodu – i właśnie przez to jest bardzo ludzka.</p>
+                </div>
+            </div>
+
+            <h3 id="chlopomania">Chłopomania a rzeczywistość</h3>
+            <p>
+                Młodopolska inteligencja fascynowała się wsią (tzw. <strong>chłopomania</strong>). Krakowscy artyści i inteligenci, tacy jak Pan Młody, zachwycali się kolorowymi strojami i rzekomo bliskim natury życiem chłopów. Była to jednak fascynacja powierzchowna. W istocie chłopi i inteligencja kompletnie się nie rozumieli, a inteligenci często odnosili się do chłopstwa z góry, nie dostrzegając w nich pełnoprawnych obywateli gotowych do walki o wolność ojczyzny.
+            </p>
+
+            <div class="knowledge-capsule">
+                <h4>Infografika: Zderzenie dwóch światów</h4>
+                <ul>
+                    <li><strong>Inteligencja (Panowie):</strong> Bierni, pogrążeni w melancholii, marzycielstwie i sztuce dla sztuki. Wykształceni, ale sparaliżowani przez narodowe kompleksy i dekadentyzm. Zdolni jedynie do wielkich słów.</li>
+                    <li><strong>Chłopi:</strong> Gotowi do działania, pełni tężyzny fizycznej – Gospodarz mówi o nich: „Chłop potęgą jest i basta”. Chcą walki, ale potrzebują duchowego i militarnego przywództwa, którego elity nie potrafią im dać.</li>
+                    <li><strong>Co ich dzieli:</strong> odmienny język i obyczaj, ubóstwo wsi, którego panowie nie widzą, oraz pamięć rabacji galicyjskiej z 1846 r. – krwawego rozrachunku chłopów ze szlachtą.</li>
+                </ul>
+                <p><strong>Wniosek:</strong> Wyspiański obnaża pozory „bratania się” ze wsią. Gdy dochodzi do konieczności walki (akt III), inteligencja ucieka w słowa i sen, a chłopi stają zbrojnie (z kosami), jednak bez dowódcy są bezsilni.</p>
+            </div>
+        </section>
+
+        <!-- ============ IV. ŚWIAT SYMBOLI ============ -->
+        <section id="swiat-symboli">
+            <h2>IV. Świat symboli</h2>
+
+            <h3 id="zjawy">Zjawy i odkryte tajemnice (akt II)</h3>
+            <p>Wybija północ. Z mroku wyłaniają się „osoby dramatu” – postacie z przeszłości, które uosabiają to, co drzemie w duszach poszczególnych gości: ich lęki, winy oraz niespełnione marzenia. Zjawy nie przychodzą przypadkowo – każda odwiedza tego, kto nosi ją w swoich myślach, i mówi jego własnym, ukrytym głosem.</p>
+
+            <div class="table-wrap">
+                <table class="table-zjawy">
+                    <thead>
+                        <tr>
+                            <th scope="col">Osoba dramatu (zjawa)</th>
+                            <th scope="col">Komu się ukazuje</th>
+                            <th scope="col">Tajemnica i symbolika</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chochoł</strong></td>
+                            <td>Isia (sc.&nbsp;1); w finale – wszyscy</td>
+                            <td>Ożywiony krzak róży okryty słomą. „Mistrz ceremonii” nocy: sprowadza zjawy, a o świcie prowadzi chocholi taniec. Symbol marazmu, ale i uśpionej nadziei.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Widmo</strong> (malarz L. de Laveaux)</td>
+                            <td>Marysia</td>
+                            <td>Niespełniona, romantyczna miłość. Przypomina czasy, które bezpowrotnie minęły, niosąc zapach grobu – przeszłości nie da się wskrzesić.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stańczyk</strong></td>
+                            <td>Dziennikarz (sc.&nbsp;7)</td>
+                            <td>Błazen Zygmunta Starego, symbol mądrości politycznej i troski o ojczyznę, patron krakowskich konserwatystów. Wytyka bierność i wręcza Dziennikarzowi kaduceusz, każąc mu „mącić” narodową kadź.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rycerz Czarny</strong> (Zawisza Czarny)</td>
+                            <td>Poeta (sc.&nbsp;9)</td>
+                            <td>Uosobienie potęgi i męstwa (Grunwald). Pod przyłbicą Poeta widzi pustkę – dekadent nie udźwignie rycerskiego ideału.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hetman</strong> (K. Branicki)</td>
+                            <td>Pan Młody (sc.&nbsp;11–13)</td>
+                            <td>Symbol Targowicy, zdrady i magnackiej pychy. Drwi z chłopomanii Pana Młodego i jego ślubu z chłopką – obnaża, jak kruche jest to „bratanie się” z ludem.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Upiór</strong> (Jakub Szela)</td>
+                            <td>Dziad (sc.&nbsp;15)</td>
+                            <td>Widmo krwawej rabacji galicyjskiej z 1846 roku (rzezi szlachty przez chłopów). Chce zmyć krew i bawić się na weselu, ale piętna nie da się zmyć – pamięć rzezi wciąż dzieli stany.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wernyhora</strong></td>
+                            <td>Gospodarz</td>
+                            <td>Legendarny ukraiński lirnik i wieszcz. Przynosi rozkaz powstania i wręcza złoty róg. Wzywa do zjednoczenia panów i chłopów ponad podziałami.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="knowledge-capsule">
+                <h4>Klucz do zjaw</h4>
+                <ul>
+                    <li><strong>Zjawa „prywatna”:</strong> Widmo – dotyczy osobistej przeszłości i miłości Marysi.</li>
+                    <li><strong>Zjawy historyczne:</strong> Stańczyk, Rycerz, Hetman i Upiór – przywołują jasne i ciemne karty dziejów: mądrość, chwałę, zdradę i zbrodnię.</li>
+                    <li><strong>Zjawa profetyczna:</strong> Wernyhora – zapowiada przyszłość i daje szansę na czyn.</li>
+                    <li><strong>Przewodnik:</strong> Chochoł – otwiera i zamyka świat zjaw.</li>
+                </ul>
+                <p>Zjawy są projekcjami myśli i sumień bohaterów – dlatego mówią ich językiem i wypominają im to, o czym woleliby nie pamiętać.</p>
+            </div>
+
+            <h3 id="rekwizyty">Magia i symbolika rekwizytów</h3>
+            <p>Przedmioty w „Weselu” nie pełnią tylko funkcji ozdobnej – stają się kluczem do zrozumienia tragicznego losu Polaków.</p>
+
+            <div class="props-grid">
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">📯</div>
+                    <h4>Złoty Róg</h4>
+                    <p>Dar Wernyhory dla Gospodarza, przekazany Jaśkowi. Symbol szansy na odzyskanie niepodległości i zewu do walki zbrojnej. Niestety, zgubiony na rozstajach dróg.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">🪶</div>
+                    <h4>Czapka z Piór</h4>
+                    <p>Krakowska czapka z pawimi piórami. Uosabia pychę, próżność i przywiązanie do rzeczy błahych. Schylając się po nią, Jasiek gubi złoty róg – prywata wygrywa z dobrem ojczyzny.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">🐎</div>
+                    <h4>Złota Podkowa</h4>
+                    <p>Zgubiona przez konia Wernyhory, znaleziona przez Staszka. Oznacza dziejowe szczęście, które Gospodyni, wiedziona zapobiegliwością i strachem przed utratą, chowa do skrzyni „na zaś”.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">🪢</div>
+                    <h4>Sznur</h4>
+                    <p>Po utracie rogu Jaśkowi zostaje „ino sznur”. Znak niewoli, bezsilności i politycznego letargu, z którego nie sposób się wyrwać.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">🌾</div>
+                    <h4>Chochoł</h4>
+                    <p>Zabezpieczona na zimę róża. Z jednej strony uosabia głęboki letarg i marazm polskiego społeczeństwa, a z drugiej daje ukrytą nadzieję na odrodzenie (żywą różę), gdy przyjdzie wiosna.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">⚔️</div>
+                    <h4>Kosy</h4>
+                    <p>Broń, z którą w akcie III chłopi (na czele z Czepcem) stają gotowi do walki. Przywołują pamięć kosynierów spod Racławic (1794) i dowodzą gotowości ludu do narodowego zrywu.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">🪄</div>
+                    <h4>Kaduceusz</h4>
+                    <p>Laska, którą Stańczyk wręcza Dziennikarzowi. W mitologii atrybut Hermesa, posłańca bogów; tu – ironiczny znak władzy nad duszami i przewodnictwa, którego inteligencja nie potrafi udźwignąć.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">💍</div>
+                    <h4>Wesele</h4>
+                    <p>Obrzęd łączący dwa stany – inteligencję i chłopów. Miało być znakiem narodowej zgody, a okazuje się tylko jej pozorem: wspólna zabawa nie oznacza wspólnoty.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon" aria-hidden="true">🖼️</div>
+                    <h4>Obrazy w izbie</h4>
+                    <p>Matka Boska Częstochowska i Ostrobramska oraz reprodukcje Matejki („Wernyhora”, „Kościuszko pod Racławicami”) – wiara i historia narodu, które w akcie II dosłownie ożywają.</p>
+                </div>
+            </div>
+
+            <h3 id="chocholi-taniec">Finałowy taniec: dramat niespełnienia</h3>
+            <div class="knowledge-capsule">
+                <h4>Chocholi taniec</h4>
+                <p>Ostatnia scena to obraz paraliżu i niewykorzystanej szansy. Jasiek powraca bez rogu, by zastać wszystkich gości pogrążonych w letargu. Przy muzyce Chochoła bohaterowie ruszają w półśnie w koszmarny, monotonny taniec wokół izby. <strong>Chocholi taniec</strong> stał się w kulturze polskiej trwałym synonimem narodowego marazmu, tragicznego uśpienia i niezdolności narodu do podjęcia decydującego działania we właściwym czasie.</p>
+            </div>
+
+            <div class="quote-box" style="border-color: var(--accent-red); color: var(--accent-red);">
+                Miałeś, chamie, złoty róg,<br>miałeś, chamie, czapkę z piór:<br>czapkę wicher niesie,<br>róg huka po lesie,<br>ostał ci się ino sznur,<br>ostał ci się ino sznur.
+                <span class="quote-author">— Chochoł do Jaśka, finał aktu III</span>
+            </div>
+
+            <div class="knowledge-capsule">
+                <h4>Dwa odczytania finału</h4>
+                <ul>
+                    <li><strong>Pesymistyczne:</strong> naród jest uśpiony i niezdolny do czynu, a dziejowa szansa została zmarnowana – przez elity i przez lud.</li>
+                    <li><strong>Optymistyczne:</strong> pod słomą chochoła przetrwa róża. Letarg nie musi trwać wiecznie – wiosna, czyli odrodzenie, może jeszcze nadejść.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ V. INTERPRETACJA ============ -->
+        <section id="interpretacja">
+            <h2>V. Interpretacja</h2>
+
+            <h3 id="problematyka">Problematyka</h3>
+            <ol class="issues">
+                <li><strong>Diagnoza społeczeństwa polskiego.</strong> „Wesele” to portret narodu na przełomie wieków – satyra zarówno na inteligencję (bierność, dekadentyzm, gadulstwo, powierzchowność), jak i na chłopów (próżność, przyziemność, polityczna niedojrzałość).</li>
+                <li><strong>Konflikt i niezrozumienie stanów.</strong> Wesele miało być symbolem zbratania dworu i wsi, a obnaża przepaść: chłopomania okazuje się modą, a pamięć rabacji wciąż dzieli ludzi.</li>
+                <li><strong>Sprawa niepodległości i niemożność czynu.</strong> Polacy marzą o wolności, ale gdy przychodzi dziejowa szansa, nie potrafią jej wykorzystać. Brakuje przywódcy, a elity uciekają w sen i słowa.</li>
+                <li><strong>Rola poezji i artysty.</strong> Wyspiański krytykuje młodopolską „sztukę dla sztuki” i dekadenckie znużenie: poezja nie budzi narodu, a poeta nie jest wieszczem na miarę romantyków. Zarazem pokazuje, że Polska wciąż żyje w sercach („A to Polska właśnie”).</li>
+                <li><strong>Rozrachunek z historią i mitami romantycznymi.</strong> Zjawy przywołują chwałę (Grunwald), mądrość (Stańczyk), zdradę (Targowica) i zbrodnię (rabacja). Wyspiański podważa romantyczne mity: o ludzie jako zbawczej sile narodu, o cudownym znaku, który sam poderwie Polaków do walki, i o narodowej jedności.</li>
+                <li><strong>Małość wobec wielkości.</strong> Przyziemne sprawy – podkowa schowana do skrzyni, czapka z pawich piór, sen po weselnej nocy – wygrywają z wielkim wezwaniem historii.</li>
+            </ol>
+
+            <h3 id="motywy">Motywy literackie</h3>
+            <ul class="motif-grid">
+                <li><strong>Wesele i uczta</strong> wspólne świętowanie jako obraz społeczeństwa (por. uczta i polonez w „Panu Tadeuszu”)</li>
+                <li><strong>Taniec</strong> od weselnej zabawy do bezwolnego chocholego tańca – taniec jako metafora losu narodu</li>
+                <li><strong>Sen i letarg</strong> noc, uśpienie, marazm; sen jako ucieczka od czynu</li>
+                <li><strong>Zjawy i duchy</strong> rozmowa z przeszłością, nawiązanie do „Dziadów”</li>
+                <li><strong>Chłopomania i wieś</strong> idealizacja wsi zderzona z rzeczywistością</li>
+                <li><strong>Ojczyzna</strong> gdzie jest Polska? W sercu, a nie na mapie</li>
+                <li><strong>Czekanie na znak</strong> bierne oczekiwanie na cud i na przywódcę</li>
+                <li><strong>Zmarnowana szansa</strong> złoty róg zgubiony dla czapki z piór</li>
+                <li><strong>Artysta i sztuka</strong> poeta, który nie potrafi być wieszczem</li>
+                <li><strong>Historia</strong> przeszłość jako źródło chwały, winy i przestrogi</li>
             </ul>
-            <p><strong>Wniosek:</strong> Wyspiański obnaża pozory "bratania się" ze wsią. Gdy dochodzi do konieczności walki (Akt III), inteligencja ucieka w poezję, a chłopi stają zbrojnie (z kosami), jednak bez dowódcy są bezsilni.</p>
-        </div>
 
-        <h3>II. Zjawy i Odkryte Tajemnice (Akt II)</h3>
-        <p>Wybija północ. Muzyka cichnie, a z mroku wyłaniają się "Osoby dramatu" – duchy przeszłości, które uosabiają to, co drzemie w duszach poszczególnych gości: ich lęki, winy oraz niespełnione marzenia.</p>
-        
-        <table class="fade-in">
-            <tr>
-                <th>Osoba dramatu (Zjawa)</th>
-                <th>Postać realna</th>
-                <th>Tajemnica i Symbolika</th>
-            </tr>
-            <tr>
-                <td><strong>Widmo</strong> (malarz L. de Laveaux)</td>
-                <td>Marysia</td>
-                <td>Niespełniona, romantyczna tęsknota. Przypomina czasy, które bezpowrotnie utracono, niosąc zapach grobu.</td>
-            </tr>
-            <tr>
-                <td><strong>Stańczyk</strong></td>
-                <td>Dziennikarz</td>
-                <td>Symbol mądrości i troski o ojczyznę. Wypomina bierność i wręcza Dziennikarzowi "kaduceus polski", każąc mu dalej "mącić narodową kadź".</td>
-            </tr>
-            <tr>
-                <td><strong>Rycerz</strong> (Zawisza Czarny)</td>
-                <td>Poeta</td>
-                <td>Uosobienie potęgi, męstwa (Grunwald). Zestawiony z dekadenckim, kruchym Poetą, przypomina o straconej sile narodu.</td>
-            </tr>
-            <tr>
-                <td><strong>Hetman</strong> (K. Branicki)</td>
-                <td>Pan Młody</td>
-                <td>Symbol Targowicy i zdrady. Szydzi z "chłopomanii" Pana Młodego, nazywając jego ślub "farbowaniem się na chłopa".</td>
-            </tr>
-            <tr>
-                <td><strong>Upiór</strong> (Jakub Szela)</td>
-                <td>Dziad</td>
-                <td>Widmo krwawej rabacji galicyjskiej z 1846 roku (rzezi szlachty przez chłopów). Przypomina o przepaści nienawiści między stanami. Chce bawić się na weselu, wciąż mając krew na rękach.</td>
-            </tr>
-            <tr>
-                <td><strong>Wernyhora</strong></td>
-                <td>Gospodarz</td>
-                <td>Wieszcz i lutniarz ukraiński. Przynosi rozkaz powstania i wręcza Złoty Róg. Wzywa do zjednoczenia Panów i Chłopów ponad podziałami.</td>
-            </tr>
-        </table>
+            <h3 id="jezyk">Język i styl</h3>
+            <ul>
+                <li><strong>Wiersz.</strong> Dramat napisany jest krótkim, rytmicznym wierszem – przeważa ośmiozgłoskowiec o toku trocheicznym, często skracany do siedmiu sylab („Miałeś, chamie, złoty róg”). Rymy i melodyka przypominają piosenkę ludową i krakowską szopkę, a kwestie rozmówców często spina wspólny rym.</li>
+                <li><strong>Stylizacja gwarowa.</strong> Mowa chłopów ma cechy gwar małopolskich, m.in. <em>mazurzenie</em> („nase” – nasze, „zmęcona” – zmęczona, „cóz” – cóż), pochylenie samogłosek („jo” – ja) i ludowe słownictwo („ino” – tylko, „haw” – tu, „ostał się” – został). Gwara charakteryzuje postacie i podkreśla podział na dwa światy.</li>
+                <li><strong>Język inteligencji.</strong> Literacki, poetycki, pełen metafor oraz aluzji literackich i historycznych, często ironiczny lub patetyczny – piękny, ale oderwany od życia.</li>
+                <li><strong>Język zjaw.</strong> Podniosły i symboliczny – zjawy mówią to, czego bohaterowie nie chcą powiedzieć głośno.</li>
+                <li><strong>Didaskalia.</strong> Obszerne i malarskie: Wyspiański opisuje barwy, światło, dźwięki i ruch jak scenograf – to ważna część syntezy sztuk.</li>
+                <li><strong>Kontrasty.</strong> Komizm sąsiaduje z tragizmem, realizm z fantastyką, satyra z patosem; groteskowy finał łączy śmiech z grozą.</li>
+            </ul>
 
-        <h3>III. Magia i Symbolika Rekwizytów</h3>
-        <p>Przedmioty w "Weselu" nie pełnią tylko funkcji ozdobnej, a stają się kluczem do zrozumienia tragicznego losu Polaków.</p>
+            <h3 id="tlo">Tło historyczne – klucz do aluzji</h3>
+            <p>Bez znajomości historii wiele scen „Wesela” pozostaje niezrozumiałych. Oto wydarzenia, do których nawiązuje dramat:</p>
+            <ul class="timeline">
+                <li><span class="year">1410</span>Bitwa pod Grunwaldem; Zawisza Czarny z Garbowa staje się symbolem rycerskiej sławy.<span class="echo">→ Rycerz Czarny</span></li>
+                <li><span class="year">XVI w.</span>Stańczyk, błazen króla Zygmunta Starego, zapamiętany jako mędrzec i patriota.<span class="echo">→ Stańczyk</span></li>
+                <li><span class="year">XVIII w.</span>Legenda Wernyhory, ukraińskiego lirnika, który miał przepowiedzieć upadek i odrodzenie Polski.<span class="echo">→ Wernyhora, obraz Matejki w izbie</span></li>
+                <li><span class="year">1792</span>Konfederacja targowicka przeciw Konstytucji 3 maja; wśród jej przywódców hetman Ksawery Branicki.<span class="echo">→ Hetman</span></li>
+                <li><span class="year">1794</span>Insurekcja kościuszkowska; chłopscy kosynierzy pod Racławicami.<span class="echo">→ kosy, obraz „Kościuszko pod Racławicami”</span></li>
+                <li><span class="year">1846</span>Rabacja galicyjska: chłopi pod wodzą Jakuba Szeli, podsycani przez władze austriackie, mordują szlachtę.<span class="echo">→ Upiór</span></li>
+                <li><span class="year">lata 60. XIX w.</span>Galicja uzyskuje autonomię; Kraków staje się ośrodkiem polskiej kultury, choć wciąż leży w zaborze austriackim.<span class="echo">→ miejsce akcji</span></li>
+                <li><span class="year">1869</span>„Teka Stańczyka” – pamflet krakowskich konserwatystów, odtąd zwanych stańczykami.<span class="echo">→ Dziennikarz i Stańczyk</span></li>
+                <li><span class="year">1899–1902</span>Powstanie bokserów w Chinach i wojna burska – głośne tematy ówczesnej prasy.<span class="echo">→ „Chińczyki trzymają się mocno!?”</span></li>
+                <li><span class="year">20 XI 1900</span>Ślub Lucjana Rydla i Jadwigi Mikołajczykówny.<span class="echo">→ geneza dramatu</span></li>
+                <li><span class="year">16 III 1901</span>Prapremiera „Wesela” w Teatrze Miejskim w Krakowie.</li>
+            </ul>
+        </section>
 
-        <div class="props-grid fade-in">
-            <div class="prop-card">
-                <div class="prop-icon">📯</div>
-                <h4>Złoty Róg</h4>
-                <p>Dar od Wernyhory dla Gospodarza, przekazany Jaśkowi. Symbol szansy na odzyskanie niepodległości, zewu do walki zbrojnej. Niestety, zgubiony na rozstajach dróg.</p>
-            </div>
-            
-            <div class="prop-card">
-                <div class="prop-icon">🪶</div>
-                <h4>Czapka z Piór</h4>
-                <p>Krakowska czapka z pawimi piórami. Uosabia pychę, egoizm i przywiązanie do rzeczy błahych. Schylając się po nią, Jasiek gubi złoty róg, przedkładając prywatyzmy nad dobro ojczyzny.</p>
-            </div>
-            
-            <div class="prop-card">
-                <div class="prop-icon">🐎</div>
-                <h4>Złota Podkowa</h4>
-                <p>Zgubiona przez wierzchowca Wernyhory. Oznacza ogromne, dziejowe szczęście, które Gospodyni, wiedniona chciwością i strachem przed utratą, chowa do skrzyni, "na potem".</p>
-            </div>
-            
-            <div class="prop-card">
-                <div class="prop-icon">🪢</div>
-                <h4>Sznur</h4>
-                <p>Po utracie rogu, Jaśkowi zostaje "ino sznur". Bezwzględny znak niewoli, zniewolenia i politycznego letargu, z którego nie sposób się wyrwać.</p>
-            </div>
-            
-            <div class="prop-card">
-                <div class="prop-icon">🌾</div>
-                <h4>Chochoł</h4>
-                <p>Zabezpieczona na zimę róża. Z jednej strony uosabia głęboki letarg i marazm polskiego społeczeństwa, a z drugiej daje ukrytą nadzieję na odrodzenie (żywą różę), gdy przyjdzie wiosna.</p>
-            </div>
-            
-            <div class="prop-card">
-                <div class="prop-icon">⚔️</div>
-                <h4>Kosa Racławicka</h4>
-                <p>Broń, w którą uzbrajają się w Akcie III chłopi (np. Czepiec). Przypomina chlubną pamięć o powstaniu kościuszkowskim i dowodzi fizycznej gotowości ludu do narodowego zrywu.</p>
-            </div>
-        </div>
+        <!-- ============ VI. PRZED MATURĄ ============ -->
+        <section id="matura">
+            <h2>VI. Przed maturą</h2>
 
-        <div class="knowledge-capsule fade-in">
-            <h4>Finałowy Taniec: Dramat Niespełnienia</h4>
-            <p>Ostatnia scena to obraz paraliżu i niewykorzystanej szansy. Jaśko powraca bez rogu, by zastać wszystkich gości pogrążonych w głębokim letargu. Na rozkaz Chochoła bohaterowie wyciągają ręce w półśnie i ruszają w koszmarny, monotonny taniec wokół izby. <strong>Chocholi taniec</strong> stał się w kulturze polskiej trwałym synonimem narodowego marazmu, tragicznego uśpienia i niezdolności narodu do podjęcia decydującego działania we właściwym czasie.</p>
-        </div>
+            <h3 id="cytaty">Najważniejsze cytaty</h3>
+            <div class="quote-list">
+                <div class="quote-item">
+                    <blockquote>„Cóż tam, panie, w polityce?<br>Chińczyki trzymają się mocno!?”</blockquote>
+                    <span class="who">Czepiec do Dziennikarza · akt I, sc.&nbsp;1</span>
+                    <p>Chłop interesuje się światem i polityką, a inteligent go lekceważy. Pierwsza scena od razu pokazuje niezrozumienie między stanami.</p>
+                </div>
+                <div class="quote-item">
+                    <blockquote>„Niech na całym świecie wojna,<br>byle polska wieś zaciszna,<br>byle polska wieś spokojna.”</blockquote>
+                    <span class="who">Dziennikarz · akt I, sc.&nbsp;1</span>
+                    <p>Inteligencja chce widzieć wieś jako sielankę, z dala od polityki i historii – kwintesencja powierzchownej chłopomanii.</p>
+                </div>
+                <div class="quote-item">
+                    <blockquote>„Chłop potęgą jest i basta.”</blockquote>
+                    <span class="who">Gospodarz do Poety · akt I</span>
+                    <p>Wiara w siłę ludu, którą akt III wystawi na próbę: siła jest, ale brakuje przywódców.</p>
+                </div>
+                <div class="quote-item">
+                    <blockquote>„Kto mnie wołał, czego chciał…”</blockquote>
+                    <span class="who">Chochoł do Isi · akt II, sc.&nbsp;1</span>
+                    <p>Pierwsze słowa Chochoła przypominają, że to goście sami przywołali go na wesele – świat zjaw jest odpowiedzią na ich własne myśli.</p>
+                </div>
+                <div class="quote-item">
+                    <blockquote>„A to Polska właśnie.”</blockquote>
+                    <span class="who">Poeta do Panny Młodej · akt III, sc.&nbsp;16</span>
+                    <p>Polski nie ma na mapie, ale żyje w sercach ludzi – jedna z najbardziej optymistycznych myśli dramatu.</p>
+                </div>
+                <div class="quote-item">
+                    <blockquote>„Miałeś, chamie, złoty róg,<br>miałeś, chamie, czapkę z piór:<br>czapkę wicher niesie,<br>róg huka po lesie,<br>ostał ci się ino sznur.”</blockquote>
+                    <span class="who">Chochoł do Jaśka · finał aktu III</span>
+                    <p>Gorzka puenta: szansa została zmarnowana, a to, co zostało, oznacza niewolę i bezsilność. Obelga „chamie” trafia w chłopa, ale wina rozkłada się na wszystkich.</p>
+                </div>
+            </div>
 
-        <div class="quote-box fade-in" style="border-color: var(--accent-red); color: var(--accent-red);">
-            Miałeś, chamie, złoty róg, <br>miałeś, chamie, czapkę z piór:<br>ostał ci się ino sznur.
-        </div>
+            <h3 id="recepcja">Recepcja i konteksty</h3>
+            <p>
+                Prapremiera z 16 marca 1901 r. stała się wydarzeniem – o „Weselu” mówił cały Kraków, a dramat szybko uznano za jedno z najważniejszych dzieł polskiego teatru. Wyrażenie „chocholi taniec” weszło do polszczyzny jako określenie marazmu i bezwładnego trwania w niemocy.
+            </p>
+            <p>
+                W 1972 r. Andrzej Wajda nakręcił ekranizację dramatu. Zagrali w niej m.in. Daniel Olbrychski (Pan Młody), Ewa Ziętek (Panna Młoda), Andrzej Łapicki (Poeta), Wojciech Pszoniak (Dziennikarz), Marek Walczewski (Gospodarz) i Franciszek Pieczka (Czepiec); zdjęcia zrealizował Witold Sobociński.
+            </p>
+
+            <div class="knowledge-capsule">
+                <h4>Konteksty, które warto przywołać</h4>
+                <ul>
+                    <li><strong>„Dziady” cz. III</strong> (A. Mickiewicz) – Salon warszawski i podziały społeczne; cz. II – obrzęd przywoływania duchów.</li>
+                    <li><strong>„Pan Tadeusz”</strong> (A. Mickiewicz) – uczta i polonez jako obraz narodowej zgody, przeciwieństwo chocholego tańca.</li>
+                    <li><strong>„Kordian”</strong> (J. Słowacki) – niemoc bohatera w chwili próby i klęska czynu.</li>
+                    <li><strong>„Rozdziobią nas kruki, wrony…”</strong> (S. Żeromski) – przepaść między powstańcem a chłopem.</li>
+                    <li><strong>„Ludzie bezdomni”</strong> i <strong>„Przedwiośnie”</strong> (S. Żeromski) – obowiązki inteligencji wobec ludu i ojczyzny.</li>
+                    <li><strong>„Szewcy”</strong> (S.I. Witkiewicz) – chochoł jako parodia symbolu Wyspiańskiego.</li>
+                    <li><strong>„Tango”</strong> (S. Mrożek) – finałowe tango, często zestawiane z chocholim tańcem.</li>
+                    <li><strong>„Wesele”</strong> (reż. W. Smarzowski, 2004) – współczesne wesele jako satyryczny portret społeczeństwa.</li>
+                </ul>
+            </div>
+
+            <h3 id="sciaga">Ściąga maturalna</h3>
+            <div class="knowledge-capsule">
+                <h4>10 rzeczy, które musisz pamiętać</h4>
+                <ol>
+                    <li>Geneza: wesele Lucjana Rydla z Jadwigą Mikołajczykówną, 20 XI 1900 r., Bronowice Małe.</li>
+                    <li>Gatunek: dramat symboliczny i narodowy; trzy akty, jedność czasu i miejsca.</li>
+                    <li>Akt I jest realistyczny, akt II – fantastyczny (zjawy), akt III łączy oba plany.</li>
+                    <li>Zjawy to projekcje sumień i marzeń bohaterów – trzeba wiedzieć, kto komu się ukazuje.</li>
+                    <li>Chłopomania to powierzchowna fascynacja inteligencji wsią.</li>
+                    <li>Chłopów i inteligencję dzieli niezrozumienie i pamięć rabacji 1846 r.</li>
+                    <li>Złoty róg – szansa; czapka z piór – prywata; sznur – niewola; podkowa – szczęście schowane „na zaś”.</li>
+                    <li>Chochoł – marazm, ale i nadzieja (róża pod słomą).</li>
+                    <li>Chocholi taniec – bezwład narodu i niezdolność do czynu.</li>
+                    <li>„A to Polska właśnie” – Polska żyje w sercach Polaków.</li>
+                </ol>
+            </div>
+
+            <div class="knowledge-capsule">
+                <h4>Przykładowe zagadnienia</h4>
+                <ul>
+                    <li>Czy bohaterowie „Wesela” są gotowi do walki o niepodległość?</li>
+                    <li>Obraz inteligencji i chłopów w „Weselu”.</li>
+                    <li>Funkcja zjaw w dramacie Wyspiańskiego.</li>
+                    <li>Symbolika przedmiotów i gestów w „Weselu”.</li>
+                    <li>„Wesele” jako dramat o zmarnowanej szansie.</li>
+                    <li>Motyw tańca w literaturze („Pan Tadeusz”, „Wesele”, „Tango”).</li>
+                    <li>Jak Wyspiański rozprawia się z romantycznymi mitami?</li>
+                </ul>
+            </div>
+
+            <h3 id="slowniczek">Słowniczek pojęć</h3>
+            <dl class="glossary">
+                <dt>Chłopomania</dt>
+                <dd>fascynacja inteligencji przełomu XIX i XX w. wsią, jej obyczajem, strojem i sztuką; często powierzchowna.</dd>
+                <dt>Dekadentyzm</dt>
+                <dd>postawa znużenia, pesymizmu i poczucia schyłku cywilizacji, typowa dla Młodej Polski.</dd>
+                <dt>Dramat symboliczny</dt>
+                <dd>dramat, w którym realne wydarzenia przenikają się z fantastyką, a postacie i przedmioty mają wieloznaczne sensy.</dd>
+                <dt>Symbol a alegoria</dt>
+                <dd>symbol ma wiele możliwych znaczeń (np. chochoł), alegoria – jedno, ustalone.</dd>
+                <dt>Synteza sztuk („teatr ogromny”)</dt>
+                <dd>idea Wyspiańskiego, by łączyć w teatrze słowo, muzykę, taniec, plastykę i światło.</dd>
+                <dt>Didaskalia</dt>
+                <dd>uwagi autora dramatu o scenografii, ruchu i zachowaniu postaci.</dd>
+                <dt>Stylizacja gwarowa (dialektyzacja)</dt>
+                <dd>wprowadzenie do tekstu cech gwary ludowej.</dd>
+                <dt>Mazurzenie</dt>
+                <dd>cecha gwar: wymowa s, z, c, dz zamiast sz, ż, cz, dż (np. „nase” zamiast „nasze”).</dd>
+                <dt>Rabacja galicyjska</dt>
+                <dd>chłopskie wystąpienie przeciw szlachcie w Galicji w 1846 r., kierowane przez Jakuba Szelę.</dd>
+                <dt>Targowica</dt>
+                <dd>konfederacja magnatów z 1792 r. wymierzona w Konstytucję 3 maja; synonim zdrady narodowej.</dd>
+                <dt>Stańczycy</dt>
+                <dd>krakowscy konserwatyści, autorzy „Teki Stańczyka” (1869), przeciwnicy zbrojnych zrywów.</dd>
+                <dt>Kaduceusz</dt>
+                <dd>laska Hermesa, posłańca bogów; w „Weselu” ironiczny znak przewodnictwa.</dd>
+                <dt>Lirnik</dt>
+                <dd>wędrowny śpiewak grający na lirze korbowej; takim legendarnym lirnikiem był Wernyhora.</dd>
+                <dt>Chochoł</dt>
+                <dd>krzew (zwykle róża) okryty na zimę słomą.</dd>
+            </dl>
+        </section>
     </div>
 
+    <footer class="site-footer">
+        <p>Materiał edukacyjny do powtórki przed maturą. Pełny tekst „Wesela” (domena publiczna) przeczytasz w <a href="https://wolnelektury.pl/katalog/lektura/wesele/">Wolnych Lekturach</a>.</p>
+    </footer>
+
 </div>
+
+<a href="#top" class="to-top" aria-label="Wróć na górę strony">↑</a>
+
+<script>
+    // Przy wydruku rozwijamy wszystkie akty streszczenia
+    window.addEventListener('beforeprint', () => {
+        document.querySelectorAll('details').forEach(details => { details.open = true; });
+    });
+</script>
 
 </body>
 </html>

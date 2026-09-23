@@ -4,33 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesele - Pigułka Maturalna</title>
+    <meta name="description" content="„Wesele” Stanisława Wyspiańskiego w pigułce: opracowanie lektury, streszczenie, bohaterowie, zjawy, symbole i quiz przed maturą.">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="container fade-in">
     <h1>Wesele</h1>
     <div class="ornament">❦ ❧ ❦</div>
-    <h3 style="text-align: center; border: none; margin-top: -10px;">Stanisława Wyspiańskiego</h3>
+    <p class="subtitle">Stanisława Wyspiańskiego</p>
 
     <!-- Nawigacja -->
-    <nav>
+    <nav class="site-nav" aria-label="Menu główne">
         <ul>
-            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="index.html" aria-current="page">Strona Główna</a></li>
             <li><a href="opracowanie.html">Opracowanie Lektury</a></li>
             <li><a href="quiz.html">Egzamin (Quiz)</a></li>
         </ul>
     </nav>
 
-    <!-- Reprodukcja obrazu Wyspiańskiego z domeny publicznej (Wikimedia Commons) -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Stanis%C5%82aw_Wyspia%C5%84ski_-_Chocho%C5%82y.jpg/800px-Stanis%C5%82aw_Wyspia%C5%84ski_-_Chocho%C5%82y.jpg" alt="Chochoły - Stanisław Wyspiański" class="hero-image">
-    <div class="image-caption">Stanisław Wyspiański, "Chochoły" (Planty krakowskie o świcie), 1898</div>
+    <!-- Reprodukcja pastelu Wyspiańskiego z domeny publicznej (Wikimedia Commons).
+         Special:FilePath sam przekierowuje na miniaturę w podanej szerokości. Gdyby zawiódł,
+         onerror próbuje pełnego pliku, a na końcu pokazuje ozdobny zastępnik zamiast pustej ramki. -->
+    <figure class="hero">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stanis%C5%82aw_Wyspia%C5%84ski,_Chocho%C5%82y.jpg?width=1280"
+             data-fallback="https://upload.wikimedia.org/wikipedia/commons/4/44/Stanis%C5%82aw_Wyspia%C5%84ski%2C_Chocho%C5%82y.jpg"
+             onerror="if (this.dataset.fallback) { this.src = this.dataset.fallback; this.removeAttribute('data-fallback'); } else { this.closest('figure').classList.add('img-missing'); }"
+             alt="Pastel Wyspiańskiego „Chochoły”: nocne Planty w Krakowie, bezlistne drzewa i krzewy róż okryte na zimę słomą"
+             class="hero-image" width="1280" height="825" decoding="async">
+        <div class="hero-fallback" aria-hidden="true">
+            <span class="fallback-icon">🌾</span>
+            <span>„Pałuby na Plantach tańczące”</span>
+        </div>
+        <figcaption class="image-caption">
+            Stanisław Wyspiański, „Chochoły” (Planty nocą), pastel, 1898–1899, Muzeum Narodowe w Warszawie.
+            <a href="https://commons.wikimedia.org/wiki/File:Stanis%C5%82aw_Wyspia%C5%84ski,_Chocho%C5%82y.jpg">Wikimedia Commons</a>, domena publiczna.
+        </figcaption>
+    </figure>
 
-    <div class="section" style="text-align: center;">
-        <p>Witaj, Maturzysto, w świecie młodopolskiej mgły, poezji i niespełnionych marzeń. Portal ten stworzony został, by ułatwić Ci wędrówkę przez skomplikowany, symboliczny świat "Wesela".</p>
+    <div class="section lead">
+        <p>Witaj, Maturzysto, w świecie młodopolskiej mgły, poezji i niespełnionych marzeń. Portal ten stworzony został, by ułatwić Ci wędrówkę przez skomplikowany, symboliczny świat „Wesela”.</p>
         <p>Wybierz <strong>Opracowanie Lektury</strong>, aby zanurzyć się w sekrety Zjaw i znaczenie magicznych rekwizytów, lub przejdź do <strong>Egzaminu (Quizu)</strong>, jeśli czujesz się na siłach, by zmierzyć się z pytaniami.</p>
     </div>
+
+    <h2>Lektura w pigułce</h2>
+    <dl class="facts">
+        <dt>Autor</dt>
+        <dd>Stanisław Wyspiański (1869–1907) – dramatopisarz, poeta i malarz</dd>
+        <dt>Epoka</dt>
+        <dd>Młoda Polska (modernizm)</dd>
+        <dt>Gatunek</dt>
+        <dd>dramat symboliczny, zwany też dramatem narodowym</dd>
+        <dt>Prapremiera</dt>
+        <dd>16 marca 1901 r., Teatr Miejski w Krakowie</dd>
+        <dt>Czas akcji</dt>
+        <dd>jedna listopadowa noc 1900 r. – od wieczora do świtu</dd>
+        <dt>Miejsce akcji</dt>
+        <dd>izba w domu Gospodarza w Bronowicach Małych pod Krakowem</dd>
+    </dl>
+
+    <h2>Od czego zacząć?</h2>
+    <div class="shortcut-grid">
+        <a class="shortcut" href="opracowanie.html#streszczenie">
+            <span class="shortcut-icon" aria-hidden="true">📜</span>
+            <strong>Streszczenie</strong>
+            <span class="shortcut-desc">Akt po akcie i plan wydarzeń</span>
+        </a>
+        <a class="shortcut" href="opracowanie.html#bohaterowie">
+            <span class="shortcut-icon" aria-hidden="true">🎭</span>
+            <strong>Bohaterowie</strong>
+            <span class="shortcut-desc">Postacie i ich pierwowzory</span>
+        </a>
+        <a class="shortcut" href="opracowanie.html#zjawy">
+            <span class="shortcut-icon" aria-hidden="true">🕯️</span>
+            <strong>Zjawy</strong>
+            <span class="shortcut-desc">Kto komu się ukazuje i dlaczego</span>
+        </a>
+        <a class="shortcut" href="opracowanie.html#rekwizyty">
+            <span class="shortcut-icon" aria-hidden="true">📯</span>
+            <strong>Symbole</strong>
+            <span class="shortcut-desc">Złoty róg, chochoł, sznur…</span>
+        </a>
+        <a class="shortcut" href="opracowanie.html#sciaga">
+            <span class="shortcut-icon" aria-hidden="true">📝</span>
+            <strong>Ściąga</strong>
+            <span class="shortcut-desc">Najważniejsze fakty i tematy</span>
+        </a>
+        <a class="shortcut" href="quiz.html">
+            <span class="shortcut-icon" aria-hidden="true">🏆</span>
+            <strong>Quiz</strong>
+            <span class="shortcut-desc">Sprawdź się przed maturą</span>
+        </a>
+    </div>
+
+    <div class="knowledge-capsule">
+        <h4>Czy wiesz, że…?</h4>
+        <ul>
+            <li>Wyspiański był szkolnym przyjacielem pana młodego, Lucjana Rydla, i gościem na jego weselu. Od ślubu do prapremiery dramatu minęły niecałe cztery miesiące.</li>
+            <li>Pastel z tej strony Wyspiański zatytułował pierwotnie „Pałuby na Plantach tańczące” – okryte na zimę słomą krzewy róż na krakowskich Plantach wydały mu się tańczącymi postaciami.</li>
+            <li>Dworek w Bronowicach Małych, w którym odbyło się wesele, to dziś Rydlówka – oddział Muzeum Krakowa. Co roku w rocznicę wesela krzak róży pod oknem izby weselnej okrywa się słomą.</li>
+            <li>Na prapremierze widzowie rozpoznawali w bohaterach swoich znajomych. Klucz do postaci opisał później Tadeusz Boy-Żeleński w szkicu „Plotka o »Weselu« Wyspiańskiego”.</li>
+        </ul>
+    </div>
+
+    <footer class="site-footer">
+        <p>Materiał edukacyjny do powtórki przed maturą. Pełny tekst „Wesela” (domena publiczna) przeczytasz w <a href="https://wolnelektury.pl/katalog/lektura/wesele/">Wolnych Lekturach</a>.</p>
+    </footer>
 
 </div>
 
