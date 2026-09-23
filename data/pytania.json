@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "question": "Gdzie rozgrywa się akcja „Wesela”?",
+        "options": [
+            "W mrocznym dworku w Soplicowie",
+            "W chacie w podkrakowskich Bronowicach",
+            "W krakowskich Sukiennicach, pośród kramów"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 2,
+        "question": "Komu z gości ukazuje się Stańczyk?",
+        "options": [
+            "Dziennikarzowi, budząc w nim wyrzuty sumienia",
+            "Poecie, jako przypomnienie dawnej chwały",
+            "Panu Młodemu, wytykając mu pozerstwo"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 3,
+        "question": "Z jakiego błahego powodu Jasiek zgubił złoty róg?",
+        "options": [
+            "Został napadnięty przez zaborców na trakcie",
+            "Schylił się, by podnieść krakowską czapkę z pawich piór",
+            "Podstępnie ukradł mu go Upiór (Jakub Szela)"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 4,
+        "question": "Co w dramacie symbolizuje finałowy „chocholi taniec”?",
+        "options": [
+            "Euforyczną radość i zjednoczenie wszystkich stanów",
+            "Marazm, bierność i głęboki letarg narodu polskiego",
+            "Nadchodzącą wiosnę i triumf chłopów nad inteligencją"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 5,
+        "question": "Z czyich ust padają słynne słowa: „Miałeś, chamie, złoty róg, ostał ci się ino sznur”?",
+        "options": [
+            "Wernyhory do zdezorientowanego Gospodarza",
+            "Jaśka do samego siebie z rozpaczy",
+            "Chochoła, drwiącego z przerażonego Jaśka"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 6,
+        "question": "Kto był pierwowzorem Pana Młodego w „Weselu”?",
+        "options": [
+            "Stanisław Wyspiański",
+            "Lucjan Rydel",
+            "Włodzimierz Tetmajer"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 7,
+        "question": "Które z wymienionych zjawisk ukazuje I akt dramatu?",
+        "options": [
+            "Solidaryzm społeczny i pełne zjednoczenie",
+            "Chłopomanię inteligencji i wzajemne niezrozumienie stanów",
+            "Bezpośrednie przygotowania do zbrojnego powstania"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 8,
+        "question": "Co uosabia Zjawa Widma ukazująca się Marysi?",
+        "options": [
+            "Tęsknotę za zmarłym ukochanym (malarzem L. de Laveaux)",
+            "Lęk przed krwawą rzezią chłopską",
+            "Przepowiednię o rychłym końcu świata"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 9,
+        "question": "Co Gospodyni ze strachu postanawia ukryć w skrzyni?",
+        "options": [
+            "Złoty róg, by nikt go nie ukradł",
+            "Złotą podkowę, którą uważa za prywatne szczęście",
+            "Kadyceusz, który wręczył Stańczyk"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 10,
+        "question": "Czego symbolem jest Kadyceusz przekazany Dziennikarzowi?",
+        "options": [
+            "Przewodnictwa ideowego nad narodem",
+            "Niewoli i poddaństwa",
+            "Czystej, niespełnionej miłości"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 11,
+        "question": "Jaka historyczna postać kryje się pod postacią Upiora?",
+        "options": [
+            "Tadeusz Kościuszko",
+            "Jakub Szela, przywódca rabacji galicyjskiej",
+            "Kazimierz Wielki"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 12,
+        "question": "Co w utworze oznacza „chłopomania”?",
+        "options": [
+            "Głęboką i autentyczną chęć pomocy na wsi",
+            "Powierzchowne fascynowanie się folklorem i wsią przez inteligencję",
+            "Chorobę rozprzestrzeniającą się wśród chłopów"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 13,
+        "question": "Jaką informację przynosi Wernyhora?",
+        "options": [
+            "Wieści o zbliżającej się zarazie",
+            "Rozkaz organizacji powstania narodowego",
+            "Ostrzeżenie przed zdradą Hetmana"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 14,
+        "question": "Które z poniższych słów padają z ust Chłopa, pokazując jego siłę?",
+        "options": [
+            "„Pospolicie to pany, wy – ptaki, my – orłany”",
+            "„Niech na całym świecie wojna, byle polska wieś zaciszna, byle polska wieś spokojna”",
+            "„Chłop potęgą jest i basta”"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 15,
+        "question": "W jaki sposób kończy się dramat „Wesele”?",
+        "options": [
+            "Chłopi wyruszają do boju pod wodzą Gospodarza",
+            "Zjawia się carskie wojsko i aresztuje zebranych",
+            "Bohaterowie zapadają w letargiczny, chocholi taniec"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 16,
+        "question": "Kogo uosabia Hetman, który ukazuje się Panu Młodemu?",
+        "options": [
+            "Ksawerego Branickiego, symbol zdrady narodowej",
+            "Jana III Sobieskiego, symbol obrony chrześcijaństwa",
+            "Stefana Czarnieckiego, symbol waleczności"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 17,
+        "question": "Co symbolizuje Chochoł w „Weselu”?",
+        "options": [
+            "Zło, które niszczy duszę narodu",
+            "Marazm i letarg, ale też ukrytą nadzieję na odrodzenie (żywą różę)",
+            "Chytrość i podstęp zaborców"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 18,
+        "question": "Z którym bohaterem rozmawia Rycerz Czarny?",
+        "options": [
+            "Z Poetą",
+            "Z Panem Młodym",
+            "Z Dziennikarzem"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 19,
+        "question": "Jaką funkcję pełni postać Racheli w dramacie?",
+        "options": [
+            "Reprezentuje interesy chłopstwa",
+            "Wprowadza aurę poezji, tajemniczości i symbolizmu, zaprasza Chochoła",
+            "Jest uosobieniem pragmatyzmu i odrzuca wszelką poezję"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 20,
+        "question": "Dlaczego inteligencja w „Weselu” jest oceniana negatywnie?",
+        "options": [
+            "Ponieważ zbrojnie zaatakowała chłopów",
+            "Ponieważ jest bierna, zagubiona i niezdolna do czynu i przewodnictwa",
+            "Ponieważ odmówiła udziału w weselu"
+        ],
+        "answer": 1
+    }
+]
