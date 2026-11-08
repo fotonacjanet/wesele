@@ -41,26 +41,6 @@
     },
     {
         "id": 5,
-        "question": "Co Boryna zapisuje Jagnie przed ślubem, wywołując gniew swoich dzieci?",
-        "options": [
-            "Sześć morgów ziemi",
-            "Całe gospodarstwo wraz z chałupą",
-            "Wszystkie oszczędności ukryte w skrzyni"
-        ],
-        "answer": 0
-    },
-    {
-        "id": 6,
-        "question": "Którym wydarzeniem kończy się tom „Jesień”?",
-        "options": [
-            "Śmiercią Boryny na polu",
-            "Bitwą o las",
-            "Weselem Boryny i Jagny"
-        ],
-        "answer": 2
-    },
-    {
-        "id": 7,
         "question": "Kto jest matką Jagny?",
         "options": [
             "Dominikowa",
@@ -70,7 +50,7 @@
         "answer": 0
     },
     {
-        "id": 8,
+        "id": 6,
         "question": "Co jest przyczyną konfliktu między Maciejem a Antkiem Boryną?",
         "options": [
             "Spór o to, kto zostanie wójtem",
@@ -80,17 +60,7 @@
         "answer": 1
     },
     {
-        "id": 9,
-        "question": "W jaki sposób umiera parobek Kuba?",
-        "options": [
-            "Zamarza w drodze z jarmarku",
-            "Ginie w bitwie o las",
-            "Postrzelony podczas kłusowania, sam odcina sobie nogę i umiera"
-        ],
-        "answer": 2
-    },
-    {
-        "id": 10,
+        "id": 7,
         "question": "Przeciwko czemu chłopi wyruszają zbrojnie w tomie „Zima”?",
         "options": [
             "Przeciw wycince lasu przez dziedzica",
@@ -100,7 +70,7 @@
         "answer": 0
     },
     {
-        "id": 11,
+        "id": 8,
         "question": "Co robi Antek podczas bitwy o las?",
         "options": [
             "Ucieka i ukrywa się w karczmie",
@@ -110,7 +80,7 @@
         "answer": 1
     },
     {
-        "id": 12,
+        "id": 9,
         "question": "Która postać przechodzi największą przemianę – z cichej, poniżanej kobiety w zaradną gospodynię?",
         "options": [
             "Jagna",
@@ -120,7 +90,7 @@
         "answer": 2
     },
     {
-        "id": 13,
+        "id": 10,
         "question": "Jak umiera Maciej Boryna?",
         "options": [
             "W więzieniu, po bitwie o las",
@@ -130,7 +100,7 @@
         "answer": 1
     },
     {
-        "id": 14,
+        "id": 11,
         "question": "Jaką karę wymierza gromada Jagnie w tomie „Lato”?",
         "options": [
             "Wywozi ją ze wsi na wozie z gnojem",
@@ -140,7 +110,7 @@
         "answer": 0
     },
     {
-        "id": 15,
+        "id": 12,
         "question": "Jakie jest największe marzenie starej żebraczki Agaty?",
         "options": [
             "Pielgrzymka do Częstochowy",
@@ -150,7 +120,7 @@
         "answer": 1
     },
     {
-        "id": 16,
+        "id": 13,
         "question": "Czym zajmuje się Rocho?",
         "options": [
             "Jest karczmarzem i lichwiarzem",
@@ -160,7 +130,7 @@
         "answer": 2
     },
     {
-        "id": 17,
+        "id": 14,
         "question": "Jaki typ kompozycji ma powieść „Chłopi”?",
         "options": [
             "Cykliczną – oparta na rytmie pór roku",
@@ -170,7 +140,7 @@
         "answer": 0
     },
     {
-        "id": 18,
+        "id": 15,
         "question": "Jaki zabieg językowy zastosował Reymont w powieści?",
         "options": [
             "Archaizację na wzór staropolski",
@@ -180,7 +150,7 @@
         "answer": 1
     },
     {
-        "id": 19,
+        "id": 16,
         "question": "Która cecha „Chłopów” wiąże się z impresjonizmem?",
         "options": [
             "Brutalne sceny bójek i śmierci",
@@ -190,12 +160,42 @@
         "answer": 1
     },
     {
-        "id": 20,
+        "id": 17,
         "question": "Co jest najwyższą wartością dla mieszkańców Lipiec?",
         "options": [
             "Wykształcenie",
             "Ziemia",
             "Sława i uznanie w mieście"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 18,
+        "question": "Kto obejmuje gospodarstwo Borynów w tomie „Lato”?",
+        "options": [
+            "Kowal Michał, zięć Boryny",
+            "Antek, po powrocie z więzienia",
+            "Jagna, jako wdowa po Borynie"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 19,
+        "question": "Gdzie przebywa większość lipieckich mężczyzn w tomie „Wiosna”?",
+        "options": [
+            "W więzieniu, po bitwie o las",
+            "Na robotach w Ameryce",
+            "W wojsku carskim"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 20,
+        "question": "Czyim synem jest Jaś, z którym Jagna przeżywa uczucie w tomie „Lato”?",
+        "options": [
+            "Wójta",
+            "Organisty",
+            "Kowala"
         ],
         "answer": 1
     }

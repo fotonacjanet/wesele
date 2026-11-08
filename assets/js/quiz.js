@@ -4,8 +4,41 @@ const LETTERS = ['a', 'b', 'c', 'd'];
 let allQuestions = [];
 let selectedQuestions = [];
 
+// Zestawy pytan: strona lektury moze zdefiniowac window.QUIZ_SETS = [{ id, label, src, opis? }].
+// Bez tego ladowany jest jeden zestaw z data/pytania.json.
+const QUIZ_SETS = window.QUIZ_SETS || [{ id: 'ogolny', label: 'Quiz', src: 'data/pytania.json' }];
+
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('data/pytania.json')
+    renderTabs();
+    const fromHash = QUIZ_SETS.find(set => '#' + set.id === window.location.hash);
+    loadSet(fromHash || QUIZ_SETS[0]);
+});
+
+function renderTabs() {
+    const tabs = document.getElementById('quizTabs');
+    if (!tabs || QUIZ_SETS.length < 2) return;
+    tabs.innerHTML = QUIZ_SETS.map(set =>
+        `<button type="button" class="quiz-tab" data-set="${set.id}">${set.label}</button>`
+    ).join('');
+    tabs.querySelectorAll('.quiz-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const set = QUIZ_SETS.find(s => s.id === btn.dataset.set);
+            history.replaceState(null, '', '#' + set.id);
+            loadSet(set);
+        });
+    });
+}
+
+function loadSet(set) {
+    document.querySelectorAll('.quiz-tab').forEach(btn =>
+        btn.classList.toggle('active', btn.dataset.set === set.id));
+    const desc = document.getElementById('quizSetDescription');
+    if (desc) desc.textContent = set.opis || '';
+
+    document.getElementById('questionsContainer').innerHTML = '<p style="text-align: center;">Trwa przygotowywanie pytań...</p>';
+    document.getElementById('result').innerHTML = '';
+
+    fetch(set.src)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -20,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Błąd podczas ładowania pytań:', error);
             document.getElementById('questionsContainer').innerHTML = '<p style="color: #f44336; text-align: center;">Nie udało się załadować pytań. Odśwież stronę.</p>';
         });
-});
+}
 
 // Tasowanie Fishera-Yatesa (rownomierne losowanie)
 function shuffle(array) {
