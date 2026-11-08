@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "question": "W jakiej wsi rozgrywa się akcja „Chłopów”?",
+        "options": [
+            "W Bronowicach pod Krakowem",
+            "W Lipcach na ziemi łowickiej",
+            "W Soplicowie na Litwie"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 2,
+        "question": "Ile tomów liczy powieść i od czego pochodzą ich tytuły?",
+        "options": [
+            "Trzy – od imion głównych bohaterów",
+            "Cztery – od pór roku",
+            "Pięć – od świąt kościelnych"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 3,
+        "question": "Jaką nagrodę otrzymał Reymont za „Chłopów” w 1924 roku?",
+        "options": [
+            "Literacką Nagrodę Nobla",
+            "Nagrodę Pulitzera",
+            "Nagrodę Nike"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 4,
+        "question": "Kim jest Maciej Boryna?",
+        "options": [
+            "Wójtem przekupionym przez dwór",
+            "Najbogatszym gospodarzem w Lipcach, wdowcem",
+            "Wędrownym dziadem uczącym dzieci"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 5,
+        "question": "Co Boryna zapisuje Jagnie przed ślubem, wywołując gniew swoich dzieci?",
+        "options": [
+            "Sześć morgów ziemi",
+            "Całe gospodarstwo wraz z chałupą",
+            "Wszystkie oszczędności ukryte w skrzyni"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 6,
+        "question": "Którym wydarzeniem kończy się tom „Jesień”?",
+        "options": [
+            "Śmiercią Boryny na polu",
+            "Bitwą o las",
+            "Weselem Boryny i Jagny"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 7,
+        "question": "Kto jest matką Jagny?",
+        "options": [
+            "Dominikowa",
+            "Agata",
+            "Hanka"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 8,
+        "question": "Co jest przyczyną konfliktu między Maciejem a Antkiem Boryną?",
+        "options": [
+            "Spór o to, kto zostanie wójtem",
+            "Ziemia (zapis dla Jagny) i miłość obu mężczyzn do tej samej kobiety",
+            "Różnica poglądów politycznych"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 9,
+        "question": "W jaki sposób umiera parobek Kuba?",
+        "options": [
+            "Zamarza w drodze z jarmarku",
+            "Ginie w bitwie o las",
+            "Postrzelony podczas kłusowania, sam odcina sobie nogę i umiera"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 10,
+        "question": "Przeciwko czemu chłopi wyruszają zbrojnie w tomie „Zima”?",
+        "options": [
+            "Przeciw wycince lasu przez dziedzica",
+            "Przeciw poborowi do carskiego wojska",
+            "Przeciw podwyżce podatków"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 11,
+        "question": "Co robi Antek podczas bitwy o las?",
+        "options": [
+            "Ucieka i ukrywa się w karczmie",
+            "Zabija borowego, który ranił jego ojca",
+            "Przechodzi na stronę dworu"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 12,
+        "question": "Która postać przechodzi największą przemianę – z cichej, poniżanej kobiety w zaradną gospodynię?",
+        "options": [
+            "Jagna",
+            "Dominikowa",
+            "Hanka"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 13,
+        "question": "Jak umiera Maciej Boryna?",
+        "options": [
+            "W więzieniu, po bitwie o las",
+            "W malignie wychodzi w pole, sieje garściami ziemię i umiera na swojej roli",
+            "Na łóżku, otoczony przez całą rodzinę"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 14,
+        "question": "Jaką karę wymierza gromada Jagnie w tomie „Lato”?",
+        "options": [
+            "Wywozi ją ze wsi na wozie z gnojem",
+            "Zamyka ją w klasztorze",
+            "Odbiera jej cały majątek i oddaje Hance"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 15,
+        "question": "Jakie jest największe marzenie starej żebraczki Agaty?",
+        "options": [
+            "Pielgrzymka do Częstochowy",
+            "Umrzeć „jak gospodyni” – w izbie, na łóżku, pod pierzyną",
+            "Wydać za mąż wnuczkę"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 16,
+        "question": "Czym zajmuje się Rocho?",
+        "options": [
+            "Jest karczmarzem i lichwiarzem",
+            "Pracuje jako organista w kościele",
+            "Wędruje po wsiach, uczy dzieci czytać po polsku i budzi świadomość narodową"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 17,
+        "question": "Jaki typ kompozycji ma powieść „Chłopi”?",
+        "options": [
+            "Cykliczną – oparta na rytmie pór roku",
+            "Szkatułkową – opowieść w opowieści",
+            "Retrospektywną – akcja cofa się w czasie"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 18,
+        "question": "Jaki zabieg językowy zastosował Reymont w powieści?",
+        "options": [
+            "Archaizację na wzór staropolski",
+            "Stylizację gwarową – zarówno w dialogach, jak i w narracji",
+            "Wyłącznie język literacki, bez gwary"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 19,
+        "question": "Która cecha „Chłopów” wiąże się z impresjonizmem?",
+        "options": [
+            "Brutalne sceny bójek i śmierci",
+            "Malarskie opisy przyrody uchwyconej w zmiennym świetle i nastroju",
+            "Szczegółowy opis prac polowych"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 20,
+        "question": "Co jest najwyższą wartością dla mieszkańców Lipiec?",
+        "options": [
+            "Wykształcenie",
+            "Ziemia",
+            "Sława i uznanie w mieście"
+        ],
+        "answer": 1
+    }
+]

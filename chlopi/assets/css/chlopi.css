@@ -1,0 +1,58 @@
+/* Motyw "Chłopi" – nadpisuje paletę bazowego arkusza ../assets/css/style.css
+   Barwy ziemi, zboża i łowickich pasiaków zamiast secesyjnej zieleni. */
+:root {
+    --dark-green: #3d3a1e;   /* ciemna oliwka – zaorana ziemia */
+    --gold: #c08a2e;         /* dojrzałe zboże */
+    --light-gold: #e6c27a;   /* słoma */
+    --paper: #f7f0e1;        /* len */
+    --dark-brown: #3b2a1a;
+    --accent-red: #a8321f;   /* czerwień pasiaka łowickiego */
+    --season-autumn: #b5651d;
+    --season-winter: #4a6a8a;
+    --season-spring: #5f8a3a;
+    --season-summer: #c9a227;
+}
+
+body {
+    background-color: #e3d7bd;
+    background-image: radial-gradient(#cdbf9f 1px, transparent 1px);
+}
+
+/* Narożne ornamenty – kłos zamiast liścia */
+.container::before, .container::after { content: '🌾'; font-size: 32px; opacity: 0.6; }
+
+nav ul li a::before { content: '✿'; }
+nav ul li a::after { content: '✿'; }
+.progress-bar::after { content: '🌾'; }
+
+/* Pasiak łowicki – dekoracyjny pas */
+.pasiak {
+    height: 14px;
+    margin: 10px 0 25px;
+    border-radius: 2px;
+    background: repeating-linear-gradient(90deg,
+        #a8321f 0 18px, #e08a1e 18px 26px, #2f6b3a 26px 34px,
+        #e6c27a 34px 40px, #2c3e7a 40px 48px, #a8321f 48px 60px);
+}
+
+/* Ilustracja: cztery pory roku */
+.hero-image.seasons { display: block; background: var(--paper); }
+
+/* Karty pór roku */
+.season-card { border-top-width: 6px; }
+.season-card.jesien { border-top-color: var(--season-autumn); }
+.season-card.zima { border-top-color: var(--season-winter); }
+.season-card.wiosna { border-top-color: var(--season-spring); }
+.season-card.lato { border-top-color: var(--season-summer); }
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Cinzel', serif;
+    color: var(--dark-green);
+}
+
+@media (max-width: 768px) {
+    table { display: block; overflow-x: auto; }
+}
