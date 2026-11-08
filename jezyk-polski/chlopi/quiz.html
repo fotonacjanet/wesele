@@ -27,7 +27,10 @@
 
     <div class="quiz-container" id="quiz">
         <h2>Egzamin Dojrzałości</h2>
-        <p style="text-align: center; font-style: italic;">Sprawdź, czy zebrałeś plon wiedzy, nim nadejdą żniwa – czyli matura.</p>
+        <p style="text-align: center; font-style: italic;">Sprawdź, czy zebrałeś plon wiedzy, nim nadejdą żniwa – czyli sprawdzian lub matura.</p>
+
+        <div class="quiz-tabs" id="quizTabs" role="tablist" aria-label="Wybierz część quizu"></div>
+        <p id="quizSetDescription"></p>
 
         <div class="progress-container" id="progressContainer" style="display: none;">
             <div class="progress-bar" id="progressBar"></div>
@@ -49,6 +52,12 @@
 </div>
 
 <script>window.QUIZ_MESSAGES = { perfect: 'Znakomicie! Gospodarzysz wiedzą jak Boryna swoją ziemią – pełne sąsieki na maturę.', good: 'Dobry plon, lecz nie wszystko zebrane z pola – powtórz jeszcze kilka szczegółów.', poor: 'Nieurodzaj... Trzeba wrócić do orki i zasiać wiedzę na nowo, nim nadejdą żniwa!' };</script>
+<script>
+window.QUIZ_SETS = [
+    { id: 'jesien', label: 'Tom I: Jesień', src: 'data/pytania-jesien.json', opis: 'Szczegóły wyłącznie z pierwszego tomu – idealne przed sprawdzianem z „Jesieni”.' },
+    { id: 'calosc', label: 'Cała powieść', src: 'data/pytania.json', opis: 'Pytania ogólne: kompozycja, bohaterowie, motywy i losy postaci we wszystkich czterech tomach.' }
+];
+</script>
 <script src="../../assets/js/quiz.js"></script>
 
 </body>

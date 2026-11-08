@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "question": "Którą z kolei żoną Macieja Boryny zostaje Jagna?",
+        "options": [
+            "Drugą",
+            "Trzecią",
+            "Czwartą"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 2,
+        "question": "Co Boryna zapisuje Jagnie przed ślubem, wywołując gniew swoich dzieci?",
+        "options": [
+            "Sześć morgów ziemi",
+            "Całe gospodarstwo wraz z chałupą",
+            "Wszystkie oszczędności ukryte w skrzyni"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 3,
+        "question": "Kto stawia zapis ziemi jako warunek zgody na ślub Jagny z Boryną?",
+        "options": [
+            "Sama Jagna",
+            "Dominikowa, matka Jagny",
+            "Ksiądz proboszcz"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 4,
+        "question": "Którym wydarzeniem kończy się tom „Jesień”?",
+        "options": [
+            "Śmiercią Boryny na polu",
+            "Bitwą o las",
+            "Weselem Boryny i Jagny"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 5,
+        "question": "W jaki sposób umiera parobek Kuba?",
+        "options": [
+            "Zamarza w drodze z jarmarku",
+            "Ginie w bitwie o las",
+            "Postrzelony podczas kłusowania, sam odcina sobie nogę i umiera"
+        ],
+        "answer": 2
+    },
+    {
+        "id": 6,
+        "question": "Kim jest Kuba Socha w domu Borynów?",
+        "options": [
+            "Parobkiem",
+            "Bratem Macieja",
+            "Sąsiadem i kumem"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 7,
+        "question": "O co Antek kłóci się z ojcem w tomie „Jesień”?",
+        "options": [
+            "O to, kto ma iść do wojska",
+            "O ziemię – ojciec nie chce podzielić gospodarstwa, a do tego zapisuje grunt Jagnie",
+            "O pieniądze ze sprzedaży krowy"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 8,
+        "question": "Dokąd przenoszą się Antek i Hanka po wypędzeniu z domu przez Borynę?",
+        "options": [
+            "Do karczmy",
+            "Do chałupy Bylicy, ojca Hanki",
+            "Do kowala Michała"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 9,
+        "question": "Kim jest kowal Michał dla Macieja Boryny?",
+        "options": [
+            "Zięciem – mężem jego córki Magdy",
+            "Bratem",
+            "Parobkiem"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 10,
+        "question": "Który z synów Boryny jest nieobecny w Lipcach, bo służy w wojsku?",
+        "options": [
+            "Antek",
+            "Grzela",
+            "Szymek"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 11,
+        "question": "Jak ma na imię najmłodsza córka Boryny, która pomaga w domu?",
+        "options": [
+            "Józka",
+            "Magda",
+            "Nastka"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 12,
+        "question": "Który z młodych mężczyzn – poza Antkiem – zabiegał o względy Jagny przed jej ślubem?",
+        "options": [
+            "Mateusz Gołąb",
+            "Kuba Socha",
+            "Jaś, syn organisty"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 13,
+        "question": "Kim są Szymek i Jędrzych?",
+        "options": [
+            "Synami Boryny z pierwszego małżeństwa",
+            "Synami Dominikowej, braćmi Jagny",
+            "Parobkami u wójta"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 14,
+        "question": "Dlaczego stara Agata jesienią opuszcza Lipce?",
+        "options": [
+            "Wyrusza na pielgrzymkę do Częstochowy",
+            "Idzie na żebry „w świat”, by nie być ciężarem dla krewnych przez zimę",
+            "Wyjeżdża do córki w mieście"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 15,
+        "question": "Jakie prace polowe wypełniają tom „Jesień”?",
+        "options": [
+            "Żniwa i zwózka zboża",
+            "Wykopki ziemniaków, orka i siew ozimin",
+            "Sianokosy i pielenie"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 16,
+        "question": "Które święto obchodzone jest w tomie „Jesień”?",
+        "options": [
+            "Zaduszki",
+            "Boże Narodzenie",
+            "Wielkanoc"
+        ],
+        "answer": 0
+    }
+]

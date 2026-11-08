@@ -508,3 +508,25 @@ a.catalog-card:hover {
     .breadcrumb { padding-left: 30px; }
     table { display: block; overflow-x: auto; }
 }
+
+/* Zakładki zestawów pytań w quizie */
+.quiz-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0 5px;
+}
+.quiz-tabs .quiz-tab {
+    width: auto;
+    margin: 0;
+    padding: 8px 18px;
+    font-size: 1em;
+    background: transparent;
+    color: var(--light-gold);
+    border: 1px solid var(--gold);
+    box-shadow: none;
+}
+.quiz-tabs .quiz-tab:hover { transform: none; background: rgba(255,255,255,0.08); }
+.quiz-tabs .quiz-tab.active { background: var(--gold); color: var(--dark-brown); }
+#quizSetDescription { text-align: center; font-size: 0.95em; opacity: 0.85; margin: 5px 0 15px; }

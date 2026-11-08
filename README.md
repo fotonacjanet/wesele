@@ -26,6 +26,8 @@ a strony lektury mają własne menu: Wprowadzenie / Opracowanie / Quiz.
 2. Podmień tytuł, nazwę w ścieżce (breadcrumb), treść opracowania i pytania w `data/pytania.json`
    (`question`, `options`, `answer` = indeks poprawnej odpowiedzi od 0).
 3. W `quiz.html` ustaw komunikaty wyniku w `window.QUIZ_MESSAGES`.
+   Quiz można podzielić na części (zakładki) przez `window.QUIZ_SETS` –
+   przykład w `jezyk-polski/chlopi/quiz.html` (osobny plik pytań na każdą część).
 4. Dodaj kafelek w `jezyk-polski/index.html`.
 5. Opcjonalnie: własny motyw w `assets/css/motywy/` (nadpisanie zmiennych z `:root`).
 
