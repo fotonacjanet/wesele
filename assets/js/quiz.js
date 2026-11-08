@@ -1,3 +1,6 @@
+const QUESTIONS_PER_QUIZ = 5;
+const LETTERS = ['a', 'b', 'c', 'd'];
+
 let allQuestions = [];
 let selectedQuestions = [];
 
@@ -19,39 +22,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
+// Tasowanie Fishera-Yatesa (rownomierne losowanie)
+function shuffle(array) {
+    const copy = array.slice();
+    for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+}
+
 function initQuiz() {
-    // Losowanie 5 unikalnych pytan
-    let shuffled = allQuestions.sort(() => 0.5 - Math.random());
-    selectedQuestions = shuffled.slice(0, 5);
+    selectedQuestions = shuffle(allQuestions).slice(0, QUESTIONS_PER_QUIZ);
 
     const container = document.getElementById('questionsContainer');
-    container.innerHTML = ''; // czyszczenie
+    container.innerHTML = '';
+    document.getElementById('result').innerHTML = '';
 
     selectedQuestions.forEach((q, index) => {
         const questionDiv = document.createElement('div');
         questionDiv.className = 'question-block';
-        
+
         let html = `<div class="question">${index + 1}. ${q.question}</div>`;
         html += `<ul class="options">`;
-        
         q.options.forEach((opt, optIndex) => {
             html += `
                 <li>
                     <label>
                         <input type="radio" name="q${index}" value="${optIndex}" onchange="updateProgress()">
-                        ${['a', 'b', 'c'][optIndex]}) ${opt}
+                        ${LETTERS[optIndex]}) ${opt}
                     </label>
                 </li>
             `;
         });
         html += `</ul>`;
-        
+
         questionDiv.innerHTML = html;
         container.appendChild(questionDiv);
     });
 
-    // Pokazanie przycisku i paska postepu po zaladowaniu pytan
     document.getElementById('submitBtn').style.display = 'block';
+    document.getElementById('retryBtn').style.display = 'none';
     document.getElementById('progressContainer').style.display = 'block';
     updateProgress();
 }
@@ -59,60 +70,60 @@ function initQuiz() {
 function updateProgress() {
     let answered = 0;
     for (let i = 0; i < selectedQuestions.length; i++) {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        if (selected) {
+        if (document.querySelector(`input[name="q${i}"]:checked`)) {
             answered++;
         }
     }
-    
     const percentage = (answered / selectedQuestions.length) * 100;
     document.getElementById('progressBar').style.width = percentage + '%';
 }
 
 function checkQuiz() {
     let score = 0;
+    const total = selectedQuestions.length;
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = '';
-    
+
     let summaryHtml = '<div class="quiz-summary"><h3>Podsumowanie odpowiedzi:</h3><ul>';
 
-    for (let i = 0; i < selectedQuestions.length; i++) {
+    selectedQuestions.forEach((q, i) => {
         const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        const q = selectedQuestions[i];
-        
-        if (selected) {
-            const userAnswer = parseInt(selected.value);
-            if (userAnswer === q.answer) {
-                score++;
-                summaryHtml += `<li>Pytanie ${i + 1}: <span class="correct-answer">Poprawnie</span></li>`;
-            } else {
-                summaryHtml += `<li>Pytanie ${i + 1}: <span class="wrong-answer">Błędnie</span> - prawidłowa odpowiedź to: ${['a', 'b', 'c'][q.answer]}) ${q.options[q.answer]}</li>`;
-            }
+        const correct = `${LETTERS[q.answer]}) ${q.options[q.answer]}`;
+
+        if (selected && parseInt(selected.value, 10) === q.answer) {
+            score++;
+            summaryHtml += `<li>Pytanie ${i + 1}: <span class="correct-answer">Poprawnie</span></li>`;
         } else {
-            summaryHtml += `<li>Pytanie ${i + 1}: <span class="wrong-answer">Brak odpowiedzi</span> - prawidłowa odpowiedź to: ${['a', 'b', 'c'][q.answer]}) ${q.options[q.answer]}</li>`;
+            const label = selected ? 'Błędnie' : 'Brak odpowiedzi';
+            summaryHtml += `<li>Pytanie ${i + 1}: <span class="wrong-answer">${label}</span> - prawidłowa odpowiedź to: ${correct}</li>`;
         }
-    }
-    
+    });
+
     summaryHtml += '</ul></div>';
 
     resultDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-    
-    let scoreHtml = '';
-    if (score === 5) {
-        resultDiv.style.color = '#d4b886'; // Złoty
-        scoreHtml = `Twój wynik: ${score}/5.<br>Znakomicie! Złoty róg jest bezpieczny w Twoich dłoniach. Matura z „Wesela” nie sprawi Ci kłopotu.`;
-    } else if (score >= 3) {
-        resultDiv.style.color = '#f4f1ea'; // Jasny papier
-        scoreHtml = `Twój wynik: ${score}/5.<br>Dobrze, lecz uważaj – nie daj się porwać chocholim tańcom i powtórz jeszcze kilka szczegółów.`;
+
+    // Komunikaty ustawiane na stronie lektury (window.QUIZ_MESSAGES), z domyslnymi wartosciami
+    const msg = Object.assign({
+        perfect: 'Znakomicie! Jesteś gotów na maturę.',
+        good: 'Dobrze, lecz powtórz jeszcze kilka szczegółów.',
+        poor: 'Niestety – czeka Cię powtórka materiału.'
+    }, window.QUIZ_MESSAGES || {});
+
+    let scoreHtml = `Twój wynik: ${score}/${total}.<br>`;
+    if (score === total) {
+        resultDiv.style.color = 'var(--light-gold)';
+        scoreHtml += msg.perfect;
+    } else if (score >= Math.ceil(total * 0.6)) {
+        resultDiv.style.color = 'var(--paper)';
+        scoreHtml += msg.good;
     } else {
-        resultDiv.style.color = '#ff9999'; // Jasnoczerwony
-        scoreHtml = `Twój wynik: ${score}/5.<br>Niestety, ostał Ci się ino sznur... Czeka Cię powtórka materiału, by obudzić się z tego letargu!`;
+        resultDiv.style.color = '#ff9999';
+        scoreHtml += msg.poor;
     }
 
     resultDiv.innerHTML = scoreHtml + summaryHtml;
-    
-    // Zablokuj mozliwosc zmiany odpowiedzi
-    const inputs = document.querySelectorAll('input[type="radio"]');
-    inputs.forEach(input => input.disabled = true);
+
+    document.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
     document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('retryBtn').style.display = 'block';
 }

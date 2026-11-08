@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wesele - Pigułka Maturalna</title>
+    <title>Ściągi Maturalne</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Wesele</h1>
+<div class="container fade-in">
+    <h1>Ściągi Maturalne</h1>
     <div class="ornament">❦ ❧ ❦</div>
-    <h3 style="text-align: center; border: none; margin-top: -10px;">Stanisława Wyspiańskiego</h3>
-
-    <!-- Nawigacja -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Strona Główna</a></li>
-            <li><a href="opracowanie.html">Opracowanie Lektury</a></li>
-            <li><a href="quiz.html">Egzamin (Quiz)</a></li>
-        </ul>
-    </nav>
-
-    <!-- Reprodukcja obrazu Wyspiańskiego z domeny publicznej (Wikimedia Commons) -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Stanis%C5%82aw_Wyspia%C5%84ski_-_Chocho%C5%82y.jpg/800px-Stanis%C5%82aw_Wyspia%C5%84ski_-_Chocho%C5%82y.jpg" alt="Chochoły - Stanisław Wyspiański" class="hero-image">
-    <div class="image-caption">Stanisław Wyspiański, "Chochoły" (Planty krakowskie o świcie), 1898</div>
+    <h3 style="text-align: center; border: none; margin-top: -10px;">Pigułki wiedzy przed egzaminem dojrzałości</h3>
 
     <div class="section" style="text-align: center;">
-        <p>Witaj, Maturzysto, w świecie młodopolskiej mgły, poezji i niespełnionych marzeń. Portal ten stworzony został, by ułatwić Ci wędrówkę przez skomplikowany, symboliczny świat "Wesela".</p>
-        <p>Wybierz <strong>Opracowanie Lektury</strong>, aby zanurzyć się w sekrety Zjaw i znaczenie magicznych rekwizytów, lub przejdź do <strong>Egzaminu (Quizu)</strong>, jeśli czujesz się na siłach, by zmierzyć się z pytaniami.</p>
+        <p>Witaj, Maturzysto! Wybierz przedmiot, a następnie temat, który chcesz powtórzyć. Każda ściąga składa się z krótkiego wprowadzenia, opracowania i quizu sprawdzającego wiedzę.</p>
+    </div>
+
+    <h2>Przedmioty</h2>
+
+    <!-- Aby dodać przedmiot: utwórz katalog (np. historia/) z plikiem index.html i dodaj tu kafelek. -->
+    <div class="catalog">
+        <a class="catalog-card" href="jezyk-polski/index.html" style="--card-accent: var(--accent-red);">
+            <div class="catalog-icon">📜</div>
+            <h3>Język polski</h3>
+            <p class="catalog-meta">Lektury obowiązkowe</p>
+            <p>Opracowania lektur, bohaterowie, symbole i quizy.</p>
+        </a>
+        <div class="catalog-card wkrotce">
+            <div class="catalog-icon">🏛️</div>
+            <h3>Historia</h3>
+            <p class="catalog-meta">Wkrótce</p>
+            <p>Miejsce na kolejne ściągi.</p>
+        </div>
     </div>
 
 </div>

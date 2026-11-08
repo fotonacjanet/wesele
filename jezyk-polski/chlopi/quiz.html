@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chłopi - Egzamin Dojrzałości</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/motywy/chlopi.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="breadcrumb"><a href="../../index.html">Ściągi</a> <span class="sep">›</span> <a href="../index.html">Język polski</a> <span class="sep">›</span> <span>Chłopi</span></div>
+    <h1>Chłopi</h1>
+    <div class="ornament">✿ 🌾 ✿</div>
+    <h3 style="text-align: center; border: none; margin-top: -10px;">Władysława Stanisława Reymonta</h3>
+
+    <!-- Menu lektury -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Wprowadzenie</a></li>
+            <li><a href="opracowanie.html">Opracowanie Lektury</a></li>
+            <li><a href="quiz.html">Egzamin (Quiz)</a></li>
+        </ul>
+    </nav>
+
+    <div class="quiz-container" id="quiz">
+        <h2>Egzamin Dojrzałości</h2>
+        <p style="text-align: center; font-style: italic;">Sprawdź, czy zebrałeś plon wiedzy, nim nadejdą żniwa – czyli matura.</p>
+
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="chlopiQuiz">
+            <!-- Pytania beda ladowane dynamicznie z JS -->
+            <div id="questionsContainer">
+                <p style="text-align: center;">Trwa przygotowywanie pytań...</p>
+            </div>
+
+            <button type="button" id="submitBtn" style="display: none;" onclick="checkQuiz()">Zakończ test i poznaj swój plon</button>
+            <button type="button" id="retryBtn" style="display: none;" onclick="initQuiz()">Spróbuj ponownie z nowymi pytaniami</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+</div>
+
+<script>window.QUIZ_MESSAGES = { perfect: 'Znakomicie! Gospodarzysz wiedzą jak Boryna swoją ziemią – pełne sąsieki na maturę.', good: 'Dobry plon, lecz nie wszystko zebrane z pola – powtórz jeszcze kilka szczegółów.', poor: 'Nieurodzaj... Trzeba wrócić do orki i zasiać wiedzę na nowo, nim nadejdą żniwa!' };</script>
+<script src="../../assets/js/quiz.js"></script>
+
+</body>
+</html>
