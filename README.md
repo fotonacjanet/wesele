@@ -15,6 +15,9 @@ jezyk-polski/<lektura>/
 assets/css/style.css          – wspólne style
 assets/css/motywy/*.css       – opcjonalne motywy kolorystyczne lektur
 assets/js/quiz.js             – wspólny skrypt quizu
+matematyka/index.html         – lista działów matematyki
+matematyka/trygonometria/     – quiz, laboratorium pola rombu i ściąga (jedna strona)
+.claude/skills/               – instrukcje dla Claude (publikacja każdej nowej rzeczy)
 ```
 
 Każda podstrona ma u góry ścieżkę (np. „Ściągi › Język polski › Chłopi”),
