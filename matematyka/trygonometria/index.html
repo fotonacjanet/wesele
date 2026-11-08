@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trygonometria - Ściągi Maturalne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: zeszyt w kratkę — wąska kolumna, zakładki u góry, karta zadania na kratce; niebieski atrament, czerwony długopis do poprawek */
+:root{
+  --paper:#f6f8fc; --grid:#e0e6f1; --card:#ffffff; --ink:#1b2333; --muted:#5a6479;
+  --pen:#2340a8; --pen-soft:#e4e9fa; --red:#c3302b; --red-soft:#fbe7e5; --ok:#1d7548; --ok-soft:#e2f3ea;
+  --line:#cfd7e6;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-math:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f131c; --grid:#1a2130; --card:#161c28; --ink:#e7eaf1; --muted:#9aa4b8;
+  --pen:#8ea6ff; --pen-soft:#1f2a4d; --red:#ff7f73; --red-soft:#3a1d1c; --ok:#62d098; --ok-soft:#163327;
+  --line:#2a3346; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#0f131c; --grid:#1a2130; --card:#161c28; --ink:#e7eaf1; --muted:#9aa4b8;
+  --pen:#8ea6ff; --pen-soft:#1f2a4d; --red:#ff7f73; --red-soft:#3a1d1c; --ok:#62d098; --ok-soft:#163327;
+  --line:#2a3346; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:22px 22px;
+  color:var(--ink); font-family:var(--f-body); font-size:17px; line-height:1.55;
+}
+.wrap{max-width:760px; margin:0 auto; padding-block:28px 64px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));
+  display:flex; flex-direction:column; gap:22px}
+header h1{font-family:var(--f-display); font-weight:400; font-size:clamp(30px,6vw,44px); line-height:1.1; margin:0; text-wrap:balance}
+header h1 span{color:var(--pen)}
+header p{margin:8px 0 0; color:var(--muted); max-width:60ch}
+.tabs{display:flex; gap:6px; flex-wrap:wrap; border-bottom:2px solid var(--line)}
+.tab{font:inherit; font-weight:700; background:none; border:0; color:var(--muted); padding:10px 14px; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px}
+.tab[aria-selected="true"]{color:var(--pen); border-bottom-color:var(--pen)}
+.tab:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--pen); outline-offset:2px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:22px; display:flex; flex-direction:column; gap:16px; min-width:0}
+h2{font-family:var(--f-display); font-weight:400; font-size:24px; margin:0; text-wrap:balance}
+h3{font-size:15px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{font:inherit; font-size:15px; padding:7px 12px; border-radius:999px; border:1.5px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--pen-soft); border-color:var(--pen); color:var(--pen); font-weight:700}
+.chip .n{font-family:var(--f-math); font-size:12px; opacity:.7; margin-left:4px}
+.row{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+.btn{font:inherit; font-weight:700; padding:11px 18px; border-radius:8px; border:2px solid var(--pen); background:var(--pen); color:var(--card); cursor:pointer}
+.btn.ghost{background:transparent; color:var(--pen)}
+.btn:disabled{opacity:.45; cursor:not-allowed}
+.meta{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:14px; color:var(--muted)}
+.tag{font-size:13px; font-weight:700; color:var(--pen); background:var(--pen-soft); padding:3px 9px; border-radius:4px}
+.bar{height:6px; background:var(--grid); border-radius:3px; overflow:hidden}
+.bar i{display:block; height:100%; background:var(--pen); transition:width .3s}
+.q{font-size:20px; line-height:1.45; margin:0}
+.m{font-family:var(--f-math); font-size:.92em; white-space:nowrap}
+.opts{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+@media (max-width:520px){.opts{grid-template-columns:1fr}}
+.opt{font:inherit; font-family:var(--f-math); font-size:17px; text-align:left; padding:13px 14px; border-radius:8px; border:1.5px solid var(--line); background:var(--card); color:var(--ink); cursor:pointer; display:flex; gap:10px; align-items:baseline}
+.opt:hover:not(:disabled){border-color:var(--pen)}
+.opt .k{font-size:12px; color:var(--muted)}
+.opt.ok{border-color:var(--ok); background:var(--ok-soft)}
+.opt.bad{border-color:var(--red); background:var(--red-soft)}
+.opt:disabled{cursor:default}
+.expl{border-left:3px solid var(--ok); padding:10px 14px; background:var(--ok-soft); border-radius:0 8px 8px 0}
+.expl.wrong{border-left-color:var(--red); background:var(--red-soft)}
+.expl b{display:block; margin-bottom:4px}
+.expl p{margin:0}
+.fig{display:flex; justify-content:center}
+.fig svg{max-width:100%; height:auto}
+.score{font-family:var(--f-display); font-size:56px; line-height:1; color:var(--pen)}
+.grade{font-size:18px}
+table{border-collapse:collapse; width:100%; font-size:15px}
+td,th{padding:7px 8px; border-bottom:1px solid var(--line); text-align:left}
+td.num{font-family:var(--f-math); text-align:right; white-space:nowrap}
+.tw{overflow-x:auto}
+.lab{display:grid; grid-template-columns:1fr; gap:16px}
+.sl{display:flex; flex-direction:column; gap:4px}
+.sl label{display:flex; justify-content:space-between; font-weight:700}
+.sl label span{font-family:var(--f-math); color:var(--pen)}
+input[type=range]{width:100%; accent-color:var(--pen)}
+.calc{display:flex; flex-direction:column; gap:8px; font-family:var(--f-math); font-size:15px}
+.calc div{padding:9px 12px; background:var(--paper); border:1px solid var(--line); border-radius:6px; overflow-x:auto}
+.calc .big{border-color:var(--pen); background:var(--pen-soft); font-size:17px}
+.calc small{display:block; font-family:var(--f-body); color:var(--muted); font-size:13px}
+.formulas{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+@media (max-width:600px){.formulas{grid-template-columns:1fr}}
+.formula{border:1.5px solid var(--line); border-radius:8px; padding:12px; display:flex; flex-direction:column; gap:4px}
+.formula .m{font-size:19px; color:var(--pen)}
+.formula span:last-child{font-size:14px; color:var(--muted)}
+.sheet{display:flex; flex-direction:column; gap:14px}
+.sheet section{display:flex; flex-direction:column; gap:8px}
+.sheet ul{margin:0; padding-left:20px; display:flex; flex-direction:column; gap:4px}
+.vt td,.vt th{text-align:center; font-family:var(--f-math)}
+.vt th:first-child,.vt td:first-child{text-align:left; font-family:var(--f-body)}
+.note{font-size:14px; color:var(--muted)}
+svg text{font-family:var(--f-math)}
+.crumbs{font-size:15px; color:var(--muted)}
+.crumbs a{color:var(--pen); text-decoration:none; border-bottom:1px dotted var(--pen)}
+.crumbs .sep{margin:0 6px}
+[hidden]{display:none!important}
+body{margin:0}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../../index.html">Ściągi</a><span class="sep">›</span><a href="../index.html">Matematyka</a><span class="sep">›</span><span>Trygonometria</span></div>
+  <header>
+    <h1>Trygonometria <span>przed klasówką</span></h1>
+    <p>Quiz z całego działu dla 3. klasy liceum, laboratorium pola rombu i ściąga. Każda odpowiedź ma rozwiązanie krok po kroku.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-quiz" aria-selected="true" data-view="quiz">Quiz</button>
+    <button class="tab" role="tab" id="t-romb" aria-selected="false" data-view="romb">Laboratorium rombu</button>
+    <button class="tab" role="tab" id="t-sheet" aria-selected="false" data-view="sheet">Ściąga</button>
+  </nav>
+
+  <!-- QUIZ -->
+  <div id="v-quiz" class="view">
+    <div class="card" id="setup">
+      <h2>Ustaw test</h2>
+      <div class="sl"><h3>Tematy</h3></div>
+      <div class="chips" id="topicChips"></div>
+      <div class="row">
+        <button class="chip" id="onlyRomb">Tylko pole rombu</button>
+        <button class="chip" id="allTopics">Wszystkie tematy</button>
+      </div>
+      <h3>Liczba pytań</h3>
+      <div class="chips" id="countChips"></div>
+      <div class="row"><button class="btn" id="startBtn">Zacznij test</button><span class="note" id="poolInfo"></span></div>
+    </div>
+    <div class="card" id="play" hidden></div>
+    <div class="card" id="result" hidden></div>
+  </div>
+
+  <!-- ROMB -->
+  <div id="v-romb" class="view" hidden>
+    <div class="card">
+      <h2>Pole rombu na trzy sposoby</h2>
+      <div class="formulas">
+        <div class="formula"><span class="m">P = a · h</span><span>bok razy wysokość, jak w każdym równoległoboku</span></div>
+        <div class="formula"><span class="m">P = e · f / 2</span><span>połowa iloczynu przekątnych (są prostopadłe)</span></div>
+        <div class="formula"><span class="m">P = a² · sin α</span><span>bok do kwadratu razy sinus kąta. Ten jest na klasówce!</span></div>
+      </div>
+      <p class="note">Skąd się bierze trzeci wzór? Wysokość opuszczona z wierzchołka tworzy trójkąt prostokątny z przeciwprostokątną a, więc h = a·sin α. Podstawiamy do P = a·h i mamy P = a·a·sin α = a²·sin α. Kąt rozwarty daje to samo pole, bo sin(180° − α) = sin α.</p>
+    </div>
+    <div class="card">
+      <h2>Przesuwaj suwaki</h2>
+      <div class="lab">
+        <div class="fig" id="labFig"></div>
+        <div class="sl"><label for="sa">Bok a <span id="saV"></span></label><input type="range" id="sa" min="1" max="10" step="0.5" value="6"></div>
+        <div class="sl"><label for="sal">Kąt α <span id="salV"></span></label><input type="range" id="sal" min="15" max="165" step="15" value="30"></div>
+        <div class="calc" id="labCalc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ŚCIĄGA -->
+  <div id="v-sheet" class="view" hidden>
+    <div class="card sheet" id="sheet"></div>
+  </div>
+</div>
+
+<script>
+const TOPICS = {
+  tri:  "Trójkąt prostokątny",
+  val:  "Kąty 30°, 45°, 60°",
+  quad: "Kąty dowolne i ćwiartki",
+  id:   "Tożsamości",
+  red:  "Wzory redukcyjne",
+  rad:  "Radiany i wykresy",
+  eq:   "Równania",
+  romb: "Pole rombu"
+};
+
+// Pierwsza opcja jest zawsze poprawna; kolejność losuje się przy wyświetlaniu.
+const Q = [
+ // Trójkąt prostokątny
+ {t:"tri", q:"Przyprostokątne trójkąta mają długości 3 i 4. Ile wynosi sin α, jeśli α leży naprzeciw boku 3?", o:["3/5","4/5","3/4","4/3"],
+  e:"Przeciwprostokątna: c = √(3² + 4²) = 5. Sinus to przyprostokątna naprzeciw kąta przez przeciwprostokątną: sin α = 3/5."},
+ {t:"tri", q:"W tym samym trójkącie (3, 4, 5) ile wynosi tg α, gdy α leży naprzeciw boku 3?", o:["3/4","4/3","3/5","4/5"],
+  e:"Tangens to przyprostokątna naprzeciw kąta przez przyprostokątną przy kącie: tg α = 3/4."},
+ {t:"tri", q:"Kąt α jest ostry i sin α = 5/13. Ile wynosi cos α?", o:["12/13","8/13","5/12","13/12"],
+  e:"Narysuj trójkąt: naprzeciw 5, przeciwprostokątna 13. Druga przyprostokątna = √(169 − 25) = 12. cos α = 12/13."},
+ {t:"tri", q:"Przeciwprostokątna ma długość 10, a jeden z kątów ostrych 30°. Jak długa jest przyprostokątna naprzeciw tego kąta?", o:["5","5√3","10√3","20"],
+  e:"x/10 = sin 30° = 1/2, więc x = 5."},
+ {t:"tri", q:"Drabina o długości 4 m jest oparta o ścianę i tworzy z ziemią kąt 60°. Na jakiej wysokości opiera się o ścianę?", o:["2√3 m","2 m","4√3 m","2√2 m"],
+  e:"Wysokość leży naprzeciw kąta 60°: h = 4 · sin 60° = 4 · √3/2 = 2√3 m."},
+ // Wartości
+ {t:"val", q:"Ile wynosi sin 60°?", o:["√3/2","1/2","√2/2","√3"], e:"sin 60° = √3/2 (połowa trójkąta równobocznego o boku 2: wysokość √3, bok 2)."},
+ {t:"val", q:"Ile wynosi tg 30°?", o:["√3/3","√3","1/2","√3/2"], e:"tg 30° = sin 30° / cos 30° = (1/2) : (√3/2) = 1/√3 = √3/3."},
+ {t:"val", q:"Oblicz sin 30° + cos 60°.", o:["1","1/2","√3","(1 + √3)/2"], e:"sin 30° = 1/2 i cos 60° = 1/2, więc suma wynosi 1."},
+ {t:"val", q:"Oblicz 2 · sin 45° · cos 45°.", o:["1","√2","1/2","2"], e:"2 · (√2/2) · (√2/2) = 2 · 2/4 = 1. To też sin 90°, z wzoru sin 2α = 2 sin α cos α."},
+ {t:"val", q:"Oblicz tg 60° · tg 30°.", o:["1","3","√3","1/3"], e:"√3 · √3/3 = 3/3 = 1. Kąty dopełniające się do 90° mają odwrotne tangensy."},
+ {t:"val", q:"Oblicz cos² 30° − sin² 30°.", o:["1/2","1","√3/2","0"], e:"cos² 30° = 3/4, sin² 30° = 1/4. Różnica 3/4 − 1/4 = 1/2 (to cos 60°)."},
+ // Ćwiartki
+ {t:"quad", q:"Punkt P(−3, 4) leży na końcowym ramieniu kąta α. Ile wynosi sin α?", o:["4/5","−4/5","3/5","−3/4"],
+  e:"r = √((−3)² + 4²) = 5. sin α = y/r = 4/5 (y jest dodatni, więc sinus też)."},
+ {t:"quad", q:"Punkt P(−3, 4) leży na końcowym ramieniu kąta α. Ile wynosi cos α?", o:["−3/5","3/5","−4/5","−3/4"],
+  e:"r = 5, cos α = x/r = −3/5. Kąt jest w II ćwiartce, gdzie cosinus jest ujemny."},
+ {t:"quad", q:"Która z wartości jest ujemna?", o:["cos 150°","sin 120°","cos 300°","tg 200°"],
+  e:"150° leży w II ćwiartce, a tam ujemny jest cosinus. sin 120° > 0 (II ćw.), cos 300° > 0 (IV ćw.), tg 200° > 0 (III ćw.)."},
+ {t:"quad", q:"Wiadomo, że sin α < 0 i cos α > 0. W której ćwiartce leży końcowe ramię kąta α?", o:["IV","III","II","I"],
+  e:"Sinus ujemny: III lub IV. Cosinus dodatni: I lub IV. Część wspólna to IV ćwiartka. Wierszyk: „W pierwszej wszystkie są dodatnie, w drugiej tylko sinus, w trzeciej tangens i cotangens, a w czwartej cosinus.”"},
+ {t:"quad", q:"Punkt P(−1, −1) leży na końcowym ramieniu kąta α. Ile wynosi tg α?", o:["1","−1","√2","−√2/2"],
+  e:"tg α = y/x = (−1)/(−1) = 1. W III ćwiartce tangens jest dodatni."},
+ // Tożsamości
+ {t:"id", q:"Kąt α jest ostry i cos α = 0,6. Ile wynosi sin α?", o:["0,8","0,4","0,64","0,36"],
+  e:"sin² α = 1 − cos² α = 1 − 0,36 = 0,64, więc sin α = 0,8 (kąt ostry, bierzemy dodatni pierwiastek)."},
+ {t:"id", q:"Uprość wyrażenie (1 − cos² α) / sin α, dla sin α ≠ 0.", o:["sin α","cos α","1","tg α"],
+  e:"Z jedynki trygonometrycznej 1 − cos² α = sin² α. Dalej sin² α / sin α = sin α."},
+ {t:"id", q:"Uprość tg α · cos α (dla cos α ≠ 0).", o:["sin α","1","cos² α","1/sin α"], e:"tg α = sin α / cos α, więc (sin α / cos α) · cos α = sin α."},
+ {t:"id", q:"Kąt α jest ostry i tg α = 2. Ile wynosi sin α?", o:["2√5/5","2/3","√5/5","1/2"],
+  e:"Narysuj trójkąt z przyprostokątnymi 2 (naprzeciw α) i 1. Przeciwprostokątna √5. sin α = 2/√5 = 2√5/5."},
+ {t:"id", q:"Wiadomo, że sin α + cos α = 4/3. Ile wynosi sin α · cos α?", o:["7/18","7/9","1/3","16/9"],
+  e:"Podnieś do kwadratu: sin² α + 2 sin α cos α + cos² α = 16/9. Czyli 1 + 2 sin α cos α = 16/9, skąd 2 sin α cos α = 7/9 i sin α cos α = 7/18."},
+ {t:"id", q:"Ile wynosi (sin α + cos α)² − 2 sin α cos α?", o:["1","0","2 sin α cos α","sin 2α"],
+  e:"Po rozwinięciu: sin² α + 2 sin α cos α + cos² α − 2 sin α cos α = sin² α + cos² α = 1."},
+ // Wzory redukcyjne
+ {t:"red", q:"Ile wynosi sin 150°?", o:["1/2","−1/2","√3/2","−√3/2"], e:"sin 150° = sin(180° − 30°) = sin 30° = 1/2. W II ćwiartce sinus jest dodatni."},
+ {t:"red", q:"Ile wynosi cos 120°?", o:["−1/2","1/2","−√3/2","√3/2"], e:"cos 120° = cos(180° − 60°) = −cos 60° = −1/2."},
+ {t:"red", q:"Ile wynosi tg 135°?", o:["−1","1","−√3","√3/3"], e:"tg 135° = tg(180° − 45°) = −tg 45° = −1."},
+ {t:"red", q:"Czemu jest równy cos(90° − α)?", o:["sin α","−sin α","cos α","−cos α"], e:"Przy 90° funkcja zmienia się na kofunkcję: cos → sin. Kąt 90° − α (α ostry) leży w I ćwiartce, więc znak +."},
+ {t:"red", q:"Ile wynosi sin 210°?", o:["−1/2","1/2","−√3/2","√3/2"], e:"sin 210° = sin(180° + 30°) = −sin 30° = −1/2. W III ćwiartce sinus jest ujemny."},
+ {t:"red", q:"Ile wynosi cos 330°?", o:["√3/2","−√3/2","1/2","−1/2"], e:"cos 330° = cos(360° − 30°) = cos 30° = √3/2. W IV ćwiartce cosinus jest dodatni."},
+ // Radiany i wykresy
+ {t:"rad", q:"Ile stopni to π/3 radiana?", o:["60°","30°","120°","45°"], e:"π rad = 180°, więc π/3 = 180°/3 = 60°."},
+ {t:"rad", q:"Zamień 135° na radiany.", o:["3π/4","2π/3","5π/6","3π/2"], e:"135° · π/180° = 135π/180 = 3π/4."},
+ {t:"rad", q:"Ile wynosi sin(7π/6)?", o:["−1/2","1/2","−√3/2","√3/2"], e:"7π/6 = 210° = 180° + 30°. W III ćwiartce sinus jest ujemny: −sin 30° = −1/2."},
+ {t:"rad", q:"Jaki jest okres podstawowy funkcji y = sin x?", o:["2π","π","π/2","4π"], e:"Sinus powtarza wartości co pełny obrót: 2π."},
+ {t:"rad", q:"Jaki jest okres podstawowy funkcji y = tg x?", o:["π","2π","π/2","nie ma okresu"], e:"Tangens powtarza się co π, bo tg(x + π) = tg x."},
+ {t:"rad", q:"Jaki jest zbiór wartości funkcji y = 3 cos x?", o:["⟨−3; 3⟩","⟨−1; 1⟩","⟨0; 3⟩","ℝ"], e:"cos x przyjmuje wartości z ⟨−1; 1⟩. Mnożenie przez 3 rozciąga wykres pionowo: ⟨−3; 3⟩."},
+ {t:"rad", q:"Jaki jest okres podstawowy funkcji y = sin 2x?", o:["π","2π","4π","π/2"], e:"Dla y = sin(bx) okres wynosi 2π/|b| = 2π/2 = π. Wykres jest ściśnięty poziomo dwa razy."},
+ // Równania
+ {t:"eq", q:"Rozwiąż sin x = 1/2 dla x ∈ ⟨0; 2π⟩.", o:["π/6 i 5π/6","π/6 i 7π/6","π/3 i 2π/3","tylko π/6"],
+  e:"sin π/6 = 1/2. Sinus jest dodatni też w II ćwiartce: π − π/6 = 5π/6."},
+ {t:"eq", q:"Rozwiąż równanie cos x = 0.", o:["x = π/2 + kπ","x = π/2 + 2kπ","x = kπ","x = π + 2kπ"],
+  e:"Cosinus jest zerem dla π/2 i 3π/2, czyli co π: x = π/2 + kπ, k ∈ ℤ."},
+ {t:"eq", q:"Rozwiąż równanie tg x = √3.", o:["x = π/3 + kπ","x = π/6 + kπ","x = π/3 + 2kπ","x = π/4 + kπ"],
+  e:"tg π/3 = √3. Okres tangensa to π, więc x = π/3 + kπ, k ∈ ℤ."},
+ {t:"eq", q:"Rozwiąż 2 sin² x − 1 = 0 dla x ∈ ⟨0; π⟩.", o:["π/4 i 3π/4","tylko π/4","π/4, 3π/4, 5π/4, 7π/4","π/6 i 5π/6"],
+  e:"sin² x = 1/2, więc sin x = √2/2 lub sin x = −√2/2. W ⟨0; π⟩ sinus jest nieujemny, zostaje sin x = √2/2: x = π/4 lub x = 3π/4."},
+ {t:"eq", q:"Ile rozwiązań ma równanie sin x = 0 w przedziale ⟨0; 2π⟩?", o:["3","2","1","4"], e:"x = 0, x = π, x = 2π. Oba końce należą do przedziału domkniętego, więc są 3 rozwiązania."},
+ {t:"eq", q:"Rozwiąż cos x = −1/2 dla x ∈ ⟨0; 2π⟩.", o:["2π/3 i 4π/3","π/3 i 5π/3","2π/3 i 5π/3","5π/6 i 7π/6"],
+  e:"cos π/3 = 1/2. Cosinus jest ujemny w II i III ćwiartce: π − π/3 = 2π/3 oraz π + π/3 = 4π/3."},
+ // Pole rombu
+ {t:"romb", q:"Romb ma bok 6 i kąt ostry 30°. Oblicz jego pole.", fig:{al:30, a:"6"}, o:["18","36","18√3","9"],
+  e:"P = a² · sin α = 6² · sin 30° = 36 · 1/2 = 18."},
+ {t:"romb", q:"Romb ma bok 4 i kąt ostry 60°. Oblicz jego pole.", fig:{al:60, a:"4"}, o:["8√3","8","16√3","4√3"],
+  e:"P = 4² · sin 60° = 16 · √3/2 = 8√3."},
+ {t:"romb", q:"Romb ma bok 10 i kąt rozwarty 150°. Oblicz jego pole.", fig:{al:150, a:"10"}, o:["50","−50","50√3","100"],
+  e:"sin 150° = sin 30° = 1/2, więc P = 100 · 1/2 = 50. Nie ma znaczenia, czy weźmiesz kąt ostry, czy rozwarty: pole wyjdzie to samo."},
+ {t:"romb", q:"Romb ma bok 8 i kąt ostry 45°. Oblicz jego pole.", fig:{al:45, a:"8"}, o:["32√2","32","64√2","16√2"],
+  e:"P = 8² · sin 45° = 64 · √2/2 = 32√2."},
+ {t:"romb", q:"Przekątne rombu mają długości 6 i 8. Oblicz jego pole.", fig:{al:73.74, d:["6","8"]}, o:["24","48","14","12"],
+  e:"P = e · f / 2 = 6 · 8 / 2 = 24."},
+ {t:"romb", q:"Przekątne rombu mają długości 6 i 8. Jaką długość ma jego bok?", fig:{al:73.74, d:["6","8"]}, o:["5","7","10","√14"],
+  e:"Przekątne rombu przecinają się pod kątem prostym i dzielą się na połowy. Powstaje trójkąt prostokątny o przyprostokątnych 3 i 4, więc bok = √(9 + 16) = 5."},
+ {t:"romb", q:"Romb ma przekątne 6 i 8 oraz bok 5. Oblicz jego wysokość.", o:["4,8","5","24","2,4"],
+  e:"P = 6 · 8 / 2 = 24. Z wzoru P = a · h: 24 = 5 · h, więc h = 24/5 = 4,8."},
+ {t:"romb", q:"Romb ma bok 10 i kąt ostry 30°. Oblicz jego wysokość.", fig:{al:30, a:"10", h:true}, o:["5","5√3","10","20"],
+  e:"Wysokość jest przyprostokątną naprzeciw kąta 30° w trójkącie o przeciwprostokątnej 10: h = 10 · sin 30° = 5."},
+ {t:"romb", q:"Romb ma pole 18 i bok 6. Ile wynosi jego kąt ostry?", o:["30°","45°","60°","90°"],
+  e:"18 = 6² · sin α, więc sin α = 18/36 = 1/2. Kąt ostry o sinusie 1/2 to 30°."},
+ {t:"romb", q:"Romb ma bok 6 i kąt ostry 60°. Jak długa jest jego krótsza przekątna?", fig:{al:60, a:"6", d:["?",""]}, o:["6","6√3","3","3√3"],
+  e:"Krótsza przekątna dzieli romb na dwa trójkąty o bokach 6, 6 i kącie 60° między nimi. To trójkąty równoboczne, więc przekątna też ma długość 6."},
+ {t:"romb", q:"Romb ma bok 4 i kąt ostry 60°. Jak długa jest jego dłuższa przekątna?", o:["4√3","4","2√3","8"],
+  e:"Połowa dłuższej przekątnej to wysokość trójkąta równobocznego o boku 4: 4√3/2 = 2√3. Cała przekątna: 4√3. Sprawdzenie: P = 4 · 4√3 / 2 = 8√3 = 16 · sin 60°."},
+ {t:"romb", q:"Romb ma bok 2 i kąt 120°. Oblicz jego pole.", fig:{al:120, a:"2"}, o:["2√3","√3","4","−2√3"],
+  e:"sin 120° = sin 60° = √3/2. P = 2² · √3/2 = 2√3."},
+ {t:"romb", q:"Romb ma bok 12, a jego kąt ostry α spełnia cos α = 0,8. Oblicz pole rombu.", o:["86,4","115,2","144","57,6"],
+  e:"Najpierw sinus z jedynki: sin² α = 1 − 0,64 = 0,36, czyli sin α = 0,6. Potem P = 12² · 0,6 = 144 · 0,6 = 86,4. Uwaga: we wzorze jest sinus, nie cosinus. 115,2 wychodzi po pomyłkowym użyciu cos α."},
+ {t:"romb", q:"Który wzór NIE daje pola rombu o boku a, kącie α, wysokości h i przekątnych e, f?", o:["P = a² · cos α","P = a · h","P = e · f / 2","P = a² · sin α"],
+  e:"Pole rombu to a · h, e · f / 2 lub a² · sin α. Cosinus pojawia się w tym miejscu tylko przez pomyłkę."}
+];
+
+const $ = s => document.querySelector(s);
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const fmt = n => (Math.round(n * 100) / 100).toString().replace(".", ",");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- Rysowanie rombu ---------- */
+function rhombusSVG({al, a = 1, scale = null, W = 300, H = 170, sideLabel = "", d = null, h = false, angleLabel = "α"}) {
+  const r = al * Math.PI / 180, c = Math.cos(r), s = Math.sin(r);
+  const pts = [[0,0],[a,0],[a + a*c, a*s],[a*c, a*s]];
+  const minX = Math.min(0, a*c), maxX = Math.max(a, a + a*c), hgt = a*s;
+  const k = scale ?? Math.min((W - 60) / (maxX - minX), (H - 50) / hgt);
+  const ox = (W - (maxX - minX) * k) / 2 - minX * k, oy = H - (H - hgt * k) / 2;
+  const P = ([x,y]) => [ox + x*k, oy - y*k];
+  const [A,B,C,D] = pts.map(P);
+  const L = (p, q, cls) => `<line x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}" ${cls}/>`;
+  let g = `<polygon points="${[A,B,C,D].map(p=>p.join(",")).join(" ")}" fill="var(--pen-soft)" stroke="var(--pen)" stroke-width="2.2" stroke-linejoin="round"/>`;
+  if (d) {
+    g += L(A, C, `stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5 4"`);
+    g += L(B, D, `stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5 4"`);
+    const mid = [(A[0]+C[0])/2, (A[1]+C[1])/2];
+    if (d[1]) g += `<text x="${(A[0]+mid[0])/2}" y="${(A[1]+mid[1])/2 - 6}" fill="var(--muted)" font-size="13" text-anchor="middle">${esc(d[1])}</text>`;
+    if (d[0]) g += `<text x="${(B[0]+mid[0])/2 + 10}" y="${(B[1]+mid[1])/2 + 4}" fill="var(--muted)" font-size="13">${esc(d[0])}</text>`;
+  }
+  if (h) {
+    // wysokość z wierzchołka, którego rzut wpada na bok AB
+    const top = al <= 90 ? D : C, foot = [top[0], A[1]];
+    g += L(top, foot, `stroke="var(--red)" stroke-width="1.8" stroke-dasharray="4 3"`);
+    const sq = 8, dir = al <= 90 ? 1 : -1;
+    g += `<polyline points="${foot[0]+dir*sq},${foot[1]} ${foot[0]+dir*sq},${foot[1]-sq} ${foot[0]},${foot[1]-sq}" fill="none" stroke="var(--red)" stroke-width="1.2"/>`;
+    g += `<text x="${top[0] + dir*7}" y="${(top[1]+foot[1])/2 + 4}" fill="var(--red)" font-size="14" text-anchor="${dir>0?"start":"end"}">h</text>`;
+  }
+  // łuk kąta przy A
+  const rr = 22, ex = A[0] + rr*c, ey = A[1] - rr*s;
+  g += `<path d="M ${A[0]+rr} ${A[1]} A ${rr} ${rr} 0 0 0 ${ex} ${ey}" fill="none" stroke="var(--red)" stroke-width="1.6"/>`;
+  const lr = 36, la = r / 2;
+  g += `<text x="${A[0] + lr*Math.cos(la)}" y="${A[1] - lr*Math.sin(la) + 5}" fill="var(--red)" font-size="14" text-anchor="middle">${esc(angleLabel)}</text>`;
+  if (sideLabel) g += `<text x="${(A[0]+B[0])/2}" y="${A[1] + 19}" fill="var(--ink)" font-size="14" text-anchor="middle">${esc(sideLabel)}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Rysunek rombu">${g}</svg>`;
+}
+
+/* ---------- Zakładki ---------- */
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", x === t));
+  document.querySelectorAll(".view").forEach(v => v.hidden = v.id !== "v-" + t.dataset.view);
+}));
+
+/* ---------- Quiz: ustawienia ---------- */
+const sel = new Set(Object.keys(TOPICS));
+let count = 15;
+function drawChips() {
+  $("#topicChips").innerHTML = Object.entries(TOPICS).map(([k, v]) =>
+    `<button class="chip" data-k="${k}" aria-pressed="${sel.has(k)}">${v}<span class="n">${Q.filter(q => q.t === k).length}</span></button>`).join("");
+  $("#topicChips").querySelectorAll(".chip").forEach(b => b.onclick = () => { const k = b.dataset.k; sel.has(k) ? sel.delete(k) : sel.add(k); drawChips(); });
+  $("#countChips").innerHTML = [10, 15, 25, 0].map(n =>
+    `<button class="chip" data-n="${n}" aria-pressed="${count === n}">${n ? n + " pytań" : "Wszystkie"}</button>`).join("");
+  $("#countChips").querySelectorAll(".chip").forEach(b => b.onclick = () => { count = +b.dataset.n; drawChips(); });
+  const avail = Q.filter(q => sel.has(q.t)).length;
+  $("#poolInfo").textContent = avail ? `Dostępnych pytań: ${avail}` : "Wybierz co najmniej jeden temat.";
+  $("#startBtn").disabled = !avail;
+}
+$("#onlyRomb").onclick = () => { sel.clear(); sel.add("romb"); count = 0; drawChips(); };
+$("#allTopics").onclick = () => { Object.keys(TOPICS).forEach(k => sel.add(k)); drawChips(); };
+
+/* ---------- Quiz: przebieg ---------- */
+let S = null;
+function start(list) {
+  let pool = list ?? shuffle(Q.filter(q => sel.has(q.t)));
+  if (!list && count) pool = pool.slice(0, count);
+  S = { pool, i: 0, score: 0, wrong: [], log: [] };
+  $("#setup").hidden = true; $("#result").hidden = true; $("#play").hidden = false;
+  show();
+}
+$("#startBtn").onclick = () => start();
+
+function show() {
+  const q = S.pool[S.i], opts = shuffle(q.o.map((txt, idx) => ({ txt, ok: idx === 0 })));
+  S.cur = { q, opts, done: false };
+  $("#play").innerHTML = `
+    <div class="meta"><span>Pytanie ${S.i + 1} z ${S.pool.length}</span><span>Wynik: ${S.score}</span></div>
+    <div class="bar"><i style="width:${S.i / S.pool.length * 100}%"></i></div>
+    <div><span class="tag">${TOPICS[q.t]}</span></div>
+    <p class="q">${esc(q.q)}</p>
+    ${q.fig ? `<div class="fig">${rhombusSVG({ al: q.fig.al, sideLabel: q.fig.a ? "a = " + q.fig.a : "", d: q.fig.d || null, h: !!q.fig.h,
+      angleLabel: q.fig.d && !q.fig.a ? "" : q.fig.al + "°" })}</div>` : ""}
+    <div class="opts">${opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span>${esc(o.txt)}</span></button>`).join("")}</div>
+    <div id="fb"></div>`;
+  $("#play").querySelectorAll(".opt").forEach(b => b.onclick = () => answer(+b.dataset.i));
+}
+
+function answer(i) {
+  const c = S.cur; if (c.done) return; c.done = true;
+  const ok = c.opts[i].ok;
+  if (ok) S.score++; else S.wrong.push(c.q);
+  S.log.push({ t: c.q.t, ok });
+  $("#play").querySelectorAll(".opt").forEach((b, j) => {
+    b.disabled = true;
+    if (c.opts[j].ok) b.classList.add("ok"); else if (j === i) b.classList.add("bad");
+  });
+  const last = S.i === S.pool.length - 1;
+  $("#fb").innerHTML = `
+    <div class="expl ${ok ? "" : "wrong"}"><b>${ok ? "Dobrze!" : "Poprawna odpowiedź: " + esc(c.q.o[0])}</b><p>${esc(c.q.e)}</p></div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="nextBtn">${last ? "Zobacz wynik" : "Dalej"}</button></div>`;
+  $("#nextBtn").focus();
+  $("#nextBtn").onclick = () => { if (last) finish(); else { S.i++; show(); } };
+}
+
+document.addEventListener("keydown", e => {
+  if ($("#play").hidden || !S || !S.cur) return;
+  if (!S.cur.done && /^[1-4]$/.test(e.key)) answer(+e.key - 1);
+});
+
+function grade(p) {
+  if (p >= 95) return "celujący (6)"; if (p >= 85) return "bardzo dobry (5)"; if (p >= 70) return "dobry (4)";
+  if (p >= 55) return "dostateczny (3)"; if (p >= 40) return "dopuszczający (2)"; return "niedostateczny (1)";
+}
+function finish() {
+  const n = S.pool.length, p = Math.round(S.score / n * 100);
+  const per = {};
+  S.log.forEach(l => { per[l.t] ??= [0, 0]; per[l.t][1]++; if (l.ok) per[l.t][0]++; });
+  $("#play").hidden = true; $("#result").hidden = false;
+  $("#result").innerHTML = `
+    <h2>Wynik testu</h2>
+    <div class="row" style="gap:18px"><span class="score">${p}%</span>
+      <span class="grade">${S.score} z ${n} poprawnych<br><span class="note">Orientacyjna ocena: <b>${grade(p)}</b></span></span></div>
+    <div class="tw"><table><thead><tr><th>Temat</th><th style="text-align:right">Poprawne</th></tr></thead><tbody>
+      ${Object.entries(per).map(([k, [a, b]]) => `<tr><td>${TOPICS[k]}</td><td class="num" style="color:${a === b ? "var(--ok)" : a / b < .5 ? "var(--red)" : "var(--ink)"}">${a} / ${b}</td></tr>`).join("")}
+    </tbody></table></div>
+    ${per.romb && per.romb[0] < per.romb[1] ? `<p class="note">Pole rombu jeszcze się chwieje. Zajrzyj do zakładki „Laboratorium rombu” i powtórz same pytania o rombie.</p>` : ""}
+    <div class="row">
+      ${S.wrong.length ? `<button class="btn" id="retryBtn">Powtórz błędne (${S.wrong.length})</button>` : ""}
+      <button class="btn ghost" id="newBtn">Nowy test</button>
+    </div>`;
+  if (S.wrong.length) { const w = shuffle(S.wrong); $("#retryBtn").onclick = () => start(w); }
+  $("#newBtn").onclick = () => { $("#result").hidden = true; $("#setup").hidden = false; drawChips(); };
+}
+
+/* ---------- Laboratorium rombu ---------- */
+const EXACT = { 30: "1/2", 45: "√2/2", 60: "√3/2", 90: "1", 120: "√3/2", 135: "√2/2", 150: "1/2" };
+function lab() {
+  const a = +$("#sa").value, al = +$("#sal").value, r = al * Math.PI / 180;
+  $("#saV").textContent = fmt(a); $("#salV").textContent = al + "°";
+  $("#labFig").innerHTML = rhombusSVG({ al, a, scale: 15, W: 340, H: 180, sideLabel: "a = " + fmt(a), d: ["e", "f"], h: true, angleLabel: al + "°" });
+  const P = a * a * Math.sin(r), h = a * Math.sin(r);
+  const e = 2 * a * Math.sin(r / 2), f = 2 * a * Math.cos(r / 2);
+  const ex = EXACT[al];
+  const sinTxt = ex ? `sin ${al}° = ${ex}` : `sin ${al}° ≈ ${fmt(Math.sin(r))}`;
+  const red = al > 90 ? `<small>Kąt rozwarty: sin ${al}° = sin(180° − ${al}°) = sin ${180 - al}°</small>` : "";
+  $("#labCalc").innerHTML = `
+    <div class="big"><small>Z boku i kąta</small>P = a² · sin α = ${fmt(a)}² · sin ${al}° = ${fmt(a * a)} · ${ex || fmt(Math.sin(r))} ${ex && ex !== "1" && !ex.includes("√") ? "= " + fmt(P) : "≈ " + fmt(P)}${red}</div>
+    <div><small>Wysokość z trójkąta prostokątnego</small>h = a · sin α = ${fmt(a)} · ${ex || fmt(Math.sin(r))} ≈ ${fmt(h)}  →  P = a · h ≈ ${fmt(a)} · ${fmt(h)} ≈ ${fmt(P)}</div>
+    <div><small>Z przekątnych</small>e ≈ ${fmt(e)},  f ≈ ${fmt(f)}  →  P = e · f / 2 ≈ ${fmt(e * f / 2)}</div>
+    <div><small>Wartość sinusa</small>${sinTxt}</div>`;
+}
+$("#sa").oninput = lab; $("#sal").oninput = lab;
+
+/* ---------- Ściąga ---------- */
+$("#sheet").innerHTML = `
+  <h2>Ściąga</h2>
+  <section><h3>Trójkąt prostokątny</h3><ul>
+    <li><span class="m">sin α = naprzeciw / przeciwprostokątna</span></li>
+    <li><span class="m">cos α = przy kącie / przeciwprostokątna</span></li>
+    <li><span class="m">tg α = naprzeciw / przy kącie</span></li></ul></section>
+  <section><h3>Wartości, które trzeba znać na pamięć</h3>
+    <div class="tw"><table class="vt"><thead><tr><th></th><th>0°</th><th>30°</th><th>45°</th><th>60°</th><th>90°</th></tr></thead><tbody>
+      <tr><td>sin</td><td>0</td><td>1/2</td><td>√2/2</td><td>√3/2</td><td>1</td></tr>
+      <tr><td>cos</td><td>1</td><td>√3/2</td><td>√2/2</td><td>1/2</td><td>0</td></tr>
+      <tr><td>tg</td><td>0</td><td>√3/3</td><td>1</td><td>√3</td><td>—</td></tr>
+    </tbody></table></div></section>
+  <section><h3>Kąty dowolne</h3><ul>
+    <li>Punkt P(x, y) na ramieniu kąta, <span class="m">r = √(x² + y²)</span>: <span class="m">sin α = y/r, cos α = x/r, tg α = y/x</span></li>
+    <li>Znaki: I ćw. wszystkie +, II ćw. tylko sin +, III ćw. tylko tg +, IV ćw. tylko cos +</li></ul></section>
+  <section><h3>Tożsamości</h3><ul>
+    <li><span class="m">sin² α + cos² α = 1</span> (jedynka trygonometryczna)</li>
+    <li><span class="m">tg α = sin α / cos α</span></li>
+    <li><span class="m">sin 2α = 2 sin α cos α</span></li></ul></section>
+  <section><h3>Wzory redukcyjne</h3><ul>
+    <li>Przy 180° i 360° funkcja zostaje ta sama, przy 90° i 270° zmienia się na kofunkcję (sin ↔ cos).</li>
+    <li>Znak bierzesz z ćwiartki, w której leży kąt wyjściowy.</li>
+    <li><span class="m">sin(180° − α) = sin α</span>, <span class="m">cos(180° − α) = −cos α</span>, <span class="m">cos(90° − α) = sin α</span></li></ul></section>
+  <section><h3>Radiany i wykresy</h3><ul>
+    <li><span class="m">π rad = 180°</span>, więc stopnie × π/180 daje radiany</li>
+    <li>Okres: sin i cos to 2π, tg to π. Dla <span class="m">sin(bx)</span> okres to <span class="m">2π/|b|</span></li>
+    <li>Zbiór wartości <span class="m">A·sin x</span> to <span class="m">⟨−|A|; |A|⟩</span></li></ul></section>
+  <section><h3>Równania</h3><ul>
+    <li><span class="m">sin x = a</span>: x = x₀ + 2kπ lub x = π − x₀ + 2kπ</li>
+    <li><span class="m">cos x = a</span>: x = x₀ + 2kπ lub x = −x₀ + 2kπ</li>
+    <li><span class="m">tg x = a</span>: x = x₀ + kπ</li>
+    <li>W przedziale wypisz wszystkie rozwiązania i sprawdź końce przedziału.</li></ul></section>
+  <section><h3>Pole rombu</h3><ul>
+    <li><span class="m">P = a · h = e · f / 2 = a² · sin α</span></li>
+    <li>Przekątne są prostopadłe i dzielą się na połowy, więc <span class="m">(e/2)² + (f/2)² = a²</span></li>
+    <li>Romb z kątem 60° to dwa trójkąty równoboczne: krótsza przekątna = a</li>
+    <li>Masz cos α? Najpierw policz sin α z jedynki, dopiero potem pole.</li></ul></section>`;
+
+drawChips(); lab();
+</script>
+</body>
+</html>
