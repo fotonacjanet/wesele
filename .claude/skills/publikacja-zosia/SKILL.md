@@ -14,7 +14,9 @@ w scratchpadzie – materiał musi wylądować w tym repozytorium i trafić na g
 - Workflow `.github/workflows/deploy.yml` wysyła stronę przez FTP na zosia.fotonacja.net
   po każdym pushu na `main` (tylko zmienione pliki).
 - Pracuj na wyznaczonej gałęzi roboczej, wypchnij ją i otwórz PR do `main`.
-  Strona zaktualizuje się po scaleniu PR (scala użytkownik).
+- Użytkownik zgodził się na automatyczne scalanie: po sprawdzeniu, że PR nie ma konfliktów,
+  czerwonych testów ani otwartych uwag, scal go sam (squash) bez pytania.
+  Po scaleniu sprawdź, czy przebieg workflow „Publikacja” na `main` zakończył się sukcesem.
 
 ## Gdzie co kłaść
 
@@ -40,6 +42,6 @@ assets/css/style.css, assets/js/quiz.js – wspólne style i skrypt quizu lektur
 2. Dodaj kafelek/link, żeby dało się do niego dojść ze strony głównej.
 3. Sprawdź lokalnie: `python3 -m http.server`, otwórz stronę, przeklikaj quiz, brak błędów w konsoli.
 4. Zaktualizuj `README.md`, jeśli zmienia się struktura.
-5. Commit, push gałęzi roboczej, PR do `main`. Podaj użytkownikowi adres,
-   pod którym materiał będzie widoczny po scaleniu, np. `https://zosia.fotonacja.net/matematyka/trygonometria/`.
+5. Commit, push gałęzi roboczej, PR do `main`, scal go i sprawdź publikację. Podaj użytkownikowi adres,
+   pod którym materiał jest widoczny, np. `https://zosia.fotonacja.net/matematyka/trygonometria/`.
 6. Artefakt na claude.ai jest opcjonalny (do szybkiego podglądu) – nie zastępuje publikacji.
