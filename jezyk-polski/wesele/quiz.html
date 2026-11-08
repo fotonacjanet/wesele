@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wesele - Egzamin Dojrzałości</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 
 <div class="container">
+    <div class="breadcrumb"><a href="../../index.html">Ściągi</a> <span class="sep">›</span> <a href="../index.html">Język polski</a> <span class="sep">›</span> <span>Wesele</span></div>
     <h1>Wesele</h1>
     <div class="ornament">❦ ❧ ❦</div>
     <h3 style="text-align: center; border: none; margin-top: -10px;">Stanisława Wyspiańskiego</h3>
 
-    <!-- Nawigacja -->
+    <!-- Menu lektury -->
     <nav>
         <ul>
-            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="index.html">Wprowadzenie</a></li>
             <li><a href="opracowanie.html">Opracowanie Lektury</a></li>
             <li><a href="quiz.html">Egzamin (Quiz)</a></li>
         </ul>
@@ -38,6 +39,7 @@
             </div>
             
             <button type="button" id="submitBtn" style="display: none;" onclick="checkQuiz()">Zakończ test i poznaj swój los</button>
+            <button type="button" id="retryBtn" style="display: none;" onclick="initQuiz()">Spróbuj ponownie z nowymi pytaniami</button>
         </form>
 
         <div id="result"></div>
@@ -45,7 +47,8 @@
 
 </div>
 
-<script src="assets/js/quiz.js"></script>
+<script>window.QUIZ_MESSAGES = { perfect: 'Znakomicie! Złoty róg jest bezpieczny w Twoich dłoniach. Matura z „Wesela” nie sprawi Ci kłopotu.', good: 'Dobrze, lecz uważaj – nie daj się porwać chocholim tańcom i powtórz jeszcze kilka szczegółów.', poor: 'Niestety, ostał Ci się ino sznur... Czeka Cię powtórka materiału, by obudzić się z tego letargu!' };</script>
+<script src="../../assets/js/quiz.js"></script>
 
 </body>
 </html>
