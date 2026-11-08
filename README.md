@@ -39,3 +39,22 @@ i zamień kafelek „Wkrótce” na stronie głównej na link.
 Quiz wczytuje pytania przez `fetch`, więc stronę trzeba otworzyć przez serwer, np.:
 
     python3 -m http.server
+
+## Publikacja (zosia.fotonacja.net)
+
+Strona publikuje się sama przez GitHub Actions (`.github/workflows/deploy.yml`) po każdej zmianie
+na gałęzi `main`. Można ją też uruchomić ręcznie: zakładka **Actions → Publikacja → Run workflow**.
+
+Jednorazowa konfiguracja w **Settings → Secrets and variables → Actions**:
+
+| Rodzaj   | Nazwa            | Przykład                 |
+|----------|------------------|--------------------------|
+| Secret   | `FTP_SERVER`     | `ftp.fotonacja.net`      |
+| Secret   | `FTP_USERNAME`   | login FTP                |
+| Secret   | `FTP_PASSWORD`   | hasło FTP                |
+| Variable | `FTP_SERVER_DIR` | `public_html/zosia/` (ze `/` na końcu; domyślnie `./`) |
+| Variable | `FTP_PROTOCOL`   | `ftps` (domyślnie), `ftp` lub `ftps-legacy` |
+| Variable | `FTP_PORT`       | `21` (domyślnie)         |
+
+Wysyłane są tylko zmienione pliki. Na serwerze pojawi się plik `.ftp-deploy-sync-state.json`,
+w którym narzędzie zapisuje, co już wgrało; nie należy go usuwać.
