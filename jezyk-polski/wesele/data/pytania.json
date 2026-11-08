@@ -85,13 +85,13 @@
         "options": [
             "Złoty róg, by nikt go nie ukradł",
             "Złotą podkowę, którą uważa za prywatne szczęście",
-            "Kadyceusz, który wręczył Stańczyk"
+            "Kaduceusz, który wręczył Stańczyk"
         ],
         "answer": 1
     },
     {
         "id": 10,
-        "question": "Czego symbolem jest Kadyceusz przekazany Dziennikarzowi?",
+        "question": "Czego symbolem jest kaduceusz przekazany Dziennikarzowi?",
         "options": [
             "Przewodnictwa ideowego nad narodem",
             "Niewoli i poddaństwa",
@@ -131,9 +131,9 @@
     },
     {
         "id": 14,
-        "question": "Które z poniższych słów padają z ust Chłopa, pokazując jego siłę?",
+        "question": "Którymi słowami Gospodarz podkreśla siłę chłopów?",
         "options": [
-            "„Pospolicie to pany, wy – ptaki, my – orłany”",
+            "„Cóż tam, panie, w polityce? Chińczyki trzymają się mocno!?”",
             "„Niech na całym świecie wojna, byle polska wieś zaciszna, byle polska wieś spokojna”",
             "„Chłop potęgą jest i basta”"
         ],
@@ -184,7 +184,7 @@
         "question": "Jaką funkcję pełni postać Racheli w dramacie?",
         "options": [
             "Reprezentuje interesy chłopstwa",
-            "Wprowadza aurę poezji, tajemniczości i symbolizmu, zaprasza Chochoła",
+            "Wprowadza aurę poezji, tajemniczości i symbolizmu, namawia do zaproszenia Chochoła",
             "Jest uosobieniem pragmatyzmu i odrzuca wszelką poezję"
         ],
         "answer": 1
