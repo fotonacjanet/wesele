@@ -1,8 +1,9 @@
-const QUESTIONS_PER_QUIZ = 5;
+const QUESTIONS_PER_QUIZ = 5; // domyslnie; zestaw moze nadpisac polem "ile"
 const LETTERS = ['a', 'b', 'c', 'd'];
 
 let allQuestions = [];
 let selectedQuestions = [];
+let currentSet = null;
 
 // Zestawy pytan: strona lektury moze zdefiniowac window.QUIZ_SETS = [{ id, label, src, opis? }].
 // Bez tego ladowany jest jeden zestaw z data/pytania.json.
@@ -30,6 +31,7 @@ function renderTabs() {
 }
 
 function loadSet(set) {
+    currentSet = set;
     document.querySelectorAll('.quiz-tab').forEach(btn =>
         btn.classList.toggle('active', btn.dataset.set === set.id));
     const desc = document.getElementById('quizSetDescription');
@@ -66,7 +68,7 @@ function shuffle(array) {
 }
 
 function initQuiz() {
-    selectedQuestions = shuffle(allQuestions).slice(0, QUESTIONS_PER_QUIZ);
+    selectedQuestions = shuffle(allQuestions).slice(0, (currentSet && currentSet.ile) || QUESTIONS_PER_QUIZ);
 
     const container = document.getElementById('questionsContainer');
     container.innerHTML = '';

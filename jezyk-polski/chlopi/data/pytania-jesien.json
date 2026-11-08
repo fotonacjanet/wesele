@@ -158,5 +158,145 @@
             "Wielkanoc"
         ],
         "answer": 0
+    },
+    {
+        "id": 17,
+        "question": "Jaką pozycję zajmuje Maciej Boryna w Lipcach?",
+        "options": [
+            "Jest wójtem wybranym przez gromadę",
+            "Jest najbogatszym i najbardziej szanowanym gospodarzem we wsi",
+            "Jest organistą przy kościele"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 18,
+        "question": "Dlaczego Jagna zgadza się wyjść za Borynę?",
+        "options": [
+            "Z wielkiej miłości do starego gospodarza",
+            "Ulega woli matki, która liczy na zapis ziemi",
+            "Bo Boryna obiecuje jej wyjazd do miasta"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 19,
+        "question": "Co łączy Antka i Jagnę już w tomie „Jesień”?",
+        "options": [
+            "Są rodzeństwem ciotecznym",
+            "Potajemne uczucie, choć Antek jest żonaty",
+            "Nic – poznają się dopiero na weselu"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 20,
+        "question": "Jak zachowuje się Hanka w pierwszym tomie?",
+        "options": [
+            "Jest cicha i uległa, znosi poniżenie ze strony Antka",
+            "Rządzi domem twardą ręką",
+            "Otwarcie walczy z teściem o zapis ziemi"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 21,
+        "question": "Jak kowal Michał podchodzi do ożenku teścia?",
+        "options": [
+            "Cieszy się szczęściem Boryny i nie myśli o majątku",
+            "Intryguje, by wyciągnąć dla siebie jak najwięcej z majątku Boryny",
+            "Wyjeżdża ze wsi, by nie brać udziału w sporze"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 22,
+        "question": "Dlaczego dzieci Boryny sprzeciwiają się jego ponownemu ożenkowi?",
+        "options": [
+            "Boją się, że stracą część ziemi i spadku",
+            "Uważają, że Jagna jest za stara",
+            "Ksiądz zabronił ślubu"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 23,
+        "question": "Czym według zwyczaju przypieczętowuje się zgodę na swatach i zmówinach?",
+        "options": [
+            "Wymianą obrączek w kościele",
+            "Wspólnym wypiciem wódki",
+            "Podpisaniem umowy u wójta"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 24,
+        "question": "Kim jest Witek w gospodarstwie Borynów?",
+        "options": [
+            "Synem Antka i Hanki",
+            "Chłopcem do posług i pastuchem",
+            "Bratem Jagny"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 25,
+        "question": "W jakich okolicznościach zostaje postrzelony Kuba?",
+        "options": [
+            "Podczas kłusowania w dworskim lesie",
+            "W bójce w karczmie",
+            "Na polowaniu urządzonym przez dziedzica"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 26,
+        "question": "Co najbardziej charakteryzuje parobka Kubę?",
+        "options": [
+            "Chciwość i skłonność do kłótni",
+            "Pobożność, pokora i przywiązanie do koni",
+            "Zamiłowanie do zabaw i tańców"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 27,
+        "question": "Kim jest Jambroży?",
+        "options": [
+            "Karczmarzem",
+            "Kościelnym",
+            "Sołtysem"
+        ],
+        "answer": 1
+    },
+    {
+        "id": 28,
+        "question": "Jak Dominikowa prowadzi swój dom?",
+        "options": [
+            "Jako wdowa rządzi twardą ręką, a jej dorośli synowie muszą jej słuchać",
+            "Oddała gospodarstwo synom i żyje u nich na wycugu",
+            "Mieszka sama, bo dzieci wyjechały"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 29,
+        "question": "Kim jest stara Agata dla Kłębów?",
+        "options": [
+            "Krewną",
+            "Matką Kłębowej",
+            "Służącą"
+        ],
+        "answer": 0
+    },
+    {
+        "id": 30,
+        "question": "Jaki obraz przyrody dominuje w tomie „Jesień”?",
+        "options": [
+            "Upał, dojrzałe zboża i burze",
+            "Słoty, mgły i szarzejące pola przed zimą",
+            "Kwitnące sady i pierwsze zielone runie"
+        ],
+        "answer": 1
     }
 ]
